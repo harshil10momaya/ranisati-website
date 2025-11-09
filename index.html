@@ -20,15 +20,40 @@
             }
         }
     </script>
+    <style>
+        /* Ensures header sections start below the fixed navigation bar */
+        section {
+            padding-top: 5rem; 
+        }
+        #home {
+            padding-top: 0; /* Hero section takes up full height */
+        }
+        /* Custom scrollbar for a sleek look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D97706; /* Orange scrollbar thumb */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1a1a1a; /* Dark track */
+        }
+        /* Ensures background images cover the space */
+        .bg-cover-center {
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
 </head>
 <body class="bg-sre-white text-gray-800">
 
     <nav class="fixed top-0 left-0 right-0 z-50 bg-sre-black text-white shadow-lg">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
-                <div class="flex-shrink-0 text-2xl font-bold tracking-widest text-sre-orange">
-                    SRI RANISATI
-                </div>
+                <a href="#home" class="flex items-center flex-shrink-0">
+                    <img src="./images/SRE_logo.svg" alt="SRI RANISATI Logo" class="h-10 w-auto mr-3">
+                </a>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4 font-semibold">
                         <a href="#home" class="hover:text-sre-orange px-3 py-2 rounded-md transition duration-200">HOME</a>
@@ -40,7 +65,7 @@
                     </div>
                 </div>
                 <div class="md:hidden">
-                    <button class="text-white hover:text-sre-orange focus:outline-none">
+                    <button id="menu-button" class="text-white hover:text-sre-orange focus:outline-none">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                     </button>
                 </div>
@@ -48,117 +73,294 @@
         </div>
         <div class="md:hidden hidden" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col">
-                <a href="#home" class="text-gray-300 hover:bg-gray-700 hover:text-sre-orange block px-3 py-2 rounded-md text-base font-medium">HOME</a>
-                <a href="#grades" class="text-gray-300 hover:bg-gray-700 hover:text-sre-orange block px-3 py-2 rounded-md text-base font-medium">GRADES</a>
-                <a href="#products" class="text-gray-300 hover:bg-gray-700 hover:text-sre-orange block px-3 py-2 rounded-md text-base font-medium">PRODUCT RANGE</a>
-                <a href="#sizes" class="text-gray-300 hover:bg-gray-700 hover:text-sre-orange block px-3 py-2 rounded-md text-base font-medium">SIZES</a>
-                <a href="#facilities" class="text-gray-300 hover:bg-gray-700 hover:text-sre-orange block px-3 py-2 rounded-md text-base font-medium">FACILITIES</a>
-                <a href="#contact" class="text-gray-300 hover:bg-gray-700 hover:text-sre-orange block px-3 py-2 rounded-md text-base font-medium">CONTACT US</a>
+                <a href="#home" class="mobile-link text-gray-300 hover:bg-gray-700 hover:text-sre-orange block px-3 py-2 rounded-md text-base font-medium">HOME</a>
+                <a href="#grades" class="mobile-link text-gray-300 hover:bg-gray-700 hover:text-sre-orange block px-3 py-2 rounded-md text-base font-medium">GRADES</a>
+                <a href="#products" class="mobile-link text-gray-300 hover:bg-gray-700 hover:text-sre-orange block px-3 py-2 rounded-md text-base font-medium">PRODUCT RANGE</a>
+                <a href="#sizes" class="mobile-link text-gray-300 hover:bg-gray-700 hover:text-sre-orange block px-3 py-2 rounded-md text-base font-medium">SIZES</a>
+                <a href="#facilities" class="mobile-link text-gray-300 hover:bg-gray-700 hover:text-sre-orange block px-3 py-2 rounded-md text-base font-medium">FACILITIES</a>
+                <a href="#contact" class="mobile-link text-gray-300 hover:bg-gray-700 hover:text-sre-orange block px-3 py-2 rounded-md text-base font-medium">CONTACT US</a>
             </div>
         </div>
     </nav>
     
-    <header id="home" class="pt-16 bg-sre-black text-white h-[90vh] flex items-center justify-center">
+    <header id="home" class="h-screen bg-sre-black text-white flex items-center justify-center">
         <div class="container mx-auto px-4 text-center py-20">
             <h1 class="text-6xl sm:text-7xl lg:text-8xl font-extrabold mb-4 text-sre-orange">
                 SRI RANISATI ENTERPRISES
             </h1>
-            <p class="text-2xl sm:text-3xl font-light max-w-4xl mx-auto mb-8 text-sre-white">
-                Established specialists in Iron and Steel trading and manufacturing in Coimbatore since 2010.
+            <p class="text-xl sm:text-2xl font-light max-w-4xl mx-auto mb-10 text-sre-white">
+                <span class="font-bold">15+ Years Experience.</span> Established specialists in Iron and Steel trading and manufacturing in Coimbatore since 2010.
             </p>
             <a href="#capabilities" class="inline-block px-10 py-4 text-lg font-bold uppercase tracking-wider bg-sre-orange text-white rounded-lg hover:bg-orange-700 transition duration-300 shadow-xl">
-                Learn More
+                View Our Capabilities
             </a>
         </div>
     </header>
 
-    <section id="capabilities" class="py-20 bg-sre-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-4 text-sre-black">OUR CAPABILITIES</h2>
-            <p class="text-xl text-center max-w-3xl mx-auto mb-12 text-gray-600">
-                We go beyond simple material supply; we precision cut, process, and finish it to your exact needs. We have a range of machinery equipped to cut materials in various sizes.
-            </p>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <div class="relative bg-sre-black text-white rounded-lg overflow-hidden shadow-xl">
-                    <div class="h-64 bg-gray-700 flex items-center justify-center">
-                        <span class="text-lg text-sre-orange">IMAGE PLACEHOLDER</span>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-2 uppercase">SEMI AUTOMATIC MACHINE</h3>
-                        <p class="text-sre-orange text-lg">Cutting Capacity: Upto 360 dia</p>
-                    </div>
-                </div>
-
-                <div class="relative bg-sre-black text-white rounded-lg overflow-hidden shadow-xl">
-                    <div class="h-64 bg-gray-700 flex items-center justify-center">
-                        <span class="text-lg text-sre-orange">IMAGE PLACEHOLDER</span>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-2 uppercase">CIRCULAR SAW CUTTING MACHINE</h3>
-                        <p class="text-sre-orange text-lg">Cutting Capacity: Upto 210 dia</p>
-                    </div>
-                </div>
-
-                <div class="relative bg-sre-black text-white rounded-lg overflow-hidden shadow-xl">
-                    <div class="h-64 bg-gray-700 flex items-center justify-center">
-                        <span class="text-lg text-sre-orange">IMAGE PLACEHOLDER</span>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-2 uppercase">ADDITIONAL CUTTING SERVICES</h3>
-                        <ul class="list-disc list-inside text-lg space-y-1 text-sre-white">
-                            <li>Circular Saw (Upto 130 dia)</li>
-                            <li>Circular Saw (Upto 85 dia)</li>
-                            <li>Circular Saw (Upto 80 dia)</li>
-                        </ul>
-                    </div>
+    <section id="about" class="py-20 bg-sre-white">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-4xl font-bold text-center mb-8 text-sre-black border-b-2 border-sre-orange inline-block mx-auto pb-2">ABOUT US</h2>
+            <div class="space-y-6 text-lg text-gray-700 leading-relaxed mt-6">
+                <p>
+                    Sri Ranisati Enterprises is an established specialist in <span class="font-bold">Iron and Steel trading and manufacturing</span> in Coimbatore, bringing <span class="font-bold">over 15+ years</span> of valuable market experience.
+                </p>
+                <p>
+                    From our start in a small warehouse in <span class="font-bold">2010</span>, we've transformed into a robust, integrated trading and manufacturing business committed to providing full-service, quality solutions. We don't just deliver iron and steel—we <span class="font-bold">precision cut, process, and finish it to your exact needs.</span>
+                </p>
+                <div class="text-center bg-gray-100 p-4 rounded-lg border-l-4 border-sre-orange font-semibold">
+                    We partner with all leading Iron and Steel manufacturers in and around Tamil Nadu to ensure seamless sourcing, and we guarantee reliable transportation and doorstep delivery of all products.
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section id="capabilities" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-4 text-sre-black">OUR PRECISION CAPABILITIES</h2>
+            <p class="text-xl text-center max-w-3xl mx-auto mb-12 text-gray-600">
+                Our operations are supported by advanced CNC cutting facilities. We have a range of specialized machinery equipped to cut materials in various sizes, ensuring precision and reliability.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+                
+                <div class="relative bg-sre-black text-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300 col-span-1 lg:col-span-2">
+                    <div class="h-64 bg-gray-700 flex items-center justify-center bg-cover-center" style="background-image: url('./images/Semi auto...- upto 360 dia.jpg');">
+                        <span class="text-lg text-sre-orange font-bold px-4 py-2 bg-sre-black bg-opacity-75 rounded">SEMI AUTOMATIC MACHINE</span>
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="text-2xl font-bold mb-1 uppercase">SEMI AUTOMATIC CUTTING</h3>
+                        <p class="text-sre-orange text-xl">Capacity: <span class="font-bold">Upto 360 dia</span></p>
+                    </div>
+                </div>
+
+                <div class="relative bg-sre-black text-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300">
+                    <div class="h-64 bg-gray-700 flex items-center justify-center bg-cover-center" style="background-image: url('./images/Cutting Saw... upto 210 dia.jpg');">
+                        <span class="text-lg text-sre-orange font-bold px-4 py-2 bg-sre-black bg-opacity-75 rounded">CIRCULAR SAW</span>
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="text-xl font-bold mb-1 uppercase">CIRCULAR SAW</h3>
+                        <p class="text-sre-orange text-lg">Capacity: <span class="font-bold">Upto 210 dia</span></p>
+                    </div>
+                </div>
+
+                <div class="relative bg-sre-black text-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300">
+                    <div class="h-64 bg-gray-700 flex items-center justify-center bg-cover-center" style="background-image: url('./images/Circular saw..- upto 130 dia.jpg');">
+                        <span class="text-lg text-sre-orange font-bold px-4 py-2 bg-sre-black bg-opacity-75 rounded">CIRCULAR SAW</span>
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="text-xl font-bold mb-1 uppercase">CIRCULAR SAW</h3>
+                        <p class="text-sre-orange text-lg">Capacity: <span class="font-bold">Upto 130 dia</span></p>
+                    </div>
+                </div>
+
+                <div class="relative bg-sre-black text-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300">
+                    <div class="h-64 bg-gray-700 flex items-center justify-center bg-cover-center" style="background-image: url('./images/Circular saw…- upto 85 dia.jpg');">
+                        <span class="text-lg text-sre-orange font-bold px-4 py-2 bg-sre-black bg-opacity-75 rounded">CIRCULAR SAW</span>
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="text-xl font-bold mb-1 uppercase">CIRCULAR SAW</h3>
+                        <p class="text-sre-orange text-lg">Capacity: <span class="font-bold">Upto 85 dia</span></p>
+                    </div>
+                </div>
+
+                <div class="relative bg-sre-black text-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300">
+                    <div class="h-64 bg-gray-700 flex items-center justify-center bg-cover-center" style="background-image: url('./images/Circular saw… upto 80 dia.jpg');">
+                        <span class="text-lg text-sre-orange font-bold px-4 py-2 bg-sre-black bg-opacity-75 rounded">CIRCULAR SAW</span>
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="text-xl font-bold mb-1 uppercase">CIRCULAR SAW</h3>
+                        <p class="text-sre-orange text-lg">Capacity: <span class="font-bold">Upto 80 dia</span></p>
+                    </div>
+                </div>
+
+            </div>
             
-            <p class="text-center mt-10 text-sre-black text-lg font-semibold">
-                Supported by a substantial 40,000 sq ft warehouse fully equipped with cranes, alongside advanced CNC cutting facilities.
+            <p class="text-center mt-12 text-sre-black text-lg font-semibold">
+                Supported by a substantial <span class="font-bold">40,000 sq ft warehouse</span> fully equipped with cranes, alongside advanced CNC cutting facilities.
             </p>
 
         </div>
     </section>
-
-    <section id="grades" class="py-20 bg-gray-200">
+    
+    <section id="grades" class="py-20 bg-sre-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-10 text-sre-black">GRADES</h2>
+            <h2 class="text-4xl font-bold text-center mb-10 text-sre-black">OUR STANDARD GRADES</h2>
+            <p class="text-lg text-center max-w-4xl mx-auto mb-8 text-gray-600">We stock a comprehensive range of quality steel grades to meet the diverse requirements of industrial, manufacturing, and construction projects across Tamil Nadu.</p>
+            <div class="max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4">
+                
+                <div class="bg-sre-black text-sre-white p-4 rounded-lg shadow-md text-center font-semibold border-b-4 border-sre-orange">MS ROUND (SAE1018)</div>
+                <div class="bg-sre-black text-sre-white p-4 rounded-lg shadow-md text-center font-semibold border-b-4 border-sre-orange">MS ROUND (IS2062)</div>
+                <div class="bg-sre-black text-sre-white p-4 rounded-lg shadow-md text-center font-semibold border-b-4 border-sre-orange">EN8</div>
+                <div class="bg-sre-black text-sre-white p-4 rounded-lg shadow-md text-center font-semibold border-b-4 border-sre-orange">EN9</div>
+                <div class="bg-sre-black text-sre-white p-4 rounded-lg shadow-md text-center font-semibold border-b-4 border-sre-orange">EN19</div>
+                <div class="bg-sre-black text-sre-white p-4 rounded-lg shadow-md text-center font-semibold border-b-4 border-sre-orange">20MNCR5</div>
+                <div class="bg-sre-black text-sre-white p-4 rounded-lg shadow-md text-center font-semibold border-b-4 border-sre-orange">EN24</div>
+                <div class="bg-sre-black text-sre-white p-4 rounded-lg shadow-md text-center font-semibold border-b-4 border-sre-orange">EN353</div>
             </div>
+        </div>
     </section>
 
-    <section id="products" class="py-20 bg-sre-white">
+    <section id="products" class="py-20 bg-gray-100">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center mb-10 text-sre-black">PRODUCT RANGE</h2>
+            <p class="text-xl text-center max-w-4xl mx-auto mb-12 text-gray-600">We supply a wide range of shapes and finishes, from rough-cut materials to bright-finished stock for precision use.</p>
+            
+            <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                
+                <div class="bg-sre-black text-white rounded-lg overflow-hidden shadow-xl">
+                    <img src="./images/BRIGHT ROUND.jpg" alt="Bright Round Steel Stock" class="w-full h-32 object-cover object-center">
+                    <div class="p-4 text-center">
+                        <h3 class="text-xl font-bold text-sre-orange">BRIGHT ROUND</h3>
+                    </div>
+                </div>
+                
+                <div class="bg-sre-black text-white rounded-lg overflow-hidden shadow-xl">
+                    <img src="./images/BLACK ROUND.jpg" alt="Black Round Steel Stock" class="w-full h-32 object-cover object-center">
+                    <div class="p-4 text-center">
+                        <h3 class="text-xl font-bold text-sre-orange">BLACK ROUND</h3>
+                    </div>
+                </div>
+
+                <div class="bg-sre-black text-white rounded-lg overflow-hidden shadow-xl">
+                    <img src="./images/BRIGHT SQUARE.jpg" alt="Bright Square Steel Stock" class="w-full h-32 object-cover object-center">
+                    <div class="p-4 text-center">
+                        <h3 class="text-xl font-bold text-sre-orange">BRIGHT SQUARE</h3>
+                    </div>
+                </div>
+
+                <div class="bg-sre-black text-white rounded-lg overflow-hidden shadow-xl">
+                    <img src="./images/BLACK SQUARE.jpg" alt="Black Square Steel Stock" class="w-full h-32 object-cover object-center">
+                    <div class="p-4 text-center">
+                        <h3 class="text-xl font-bold text-sre-orange">BLACK SQUARE</h3>
+                    </div>
+                </div>
+
+                <div class="bg-sre-black text-white rounded-lg overflow-hidden shadow-xl">
+                    <img src="./images/BRIGHT HEX.jpg" alt="Bright Hexagonal Steel Stock" class="w-full h-32 object-cover object-center">
+                    <div class="p-4 text-center">
+                        <h3 class="text-xl font-bold text-sre-orange">BRIGHT HEX</h3>
+                    </div>
+                </div>
+
+                <div class="bg-sre-black text-white rounded-lg overflow-hidden shadow-xl">
+                    <img src="./images/BRIGHT FLAT.jpg" alt="Bright Flat Steel Stock" class="w-full h-32 object-cover object-center">
+                    <div class="p-4 text-center">
+                        <h3 class="text-xl font-bold text-sre-orange">BRIGHT FLAT</h3>
+                    </div>
+                </div>
+                
+                <div class="bg-sre-black text-white rounded-lg overflow-hidden shadow-xl">
+                    <img src="./images/ROUGH FLAT.jpg" alt="Rough Flat Steel Stock" class="w-full h-32 object-cover object-center">
+                    <div class="p-4 text-center">
+                        <h3 class="text-xl font-bold text-sre-orange">ROUGH FLAT</h3>
+                    </div>
+                </div>
+                
             </div>
+        </div>
     </section>
 
-    <section id="sizes" class="py-20 bg-gray-200">
+    <section id="sizes" class="py-20 bg-sre-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-10 text-sre-black">SIZES</h2>
+            <h2 class="text-4xl font-bold text-center mb-10 text-sre-black">AVAILABILITY & SIZING</h2>
+            <p class="text-lg text-center max-w-4xl mx-auto mb-8 text-gray-600">Our comprehensive stock ensures you get the exact dimensions needed, from small diameters to large industrial sizes.</p>
+
+            <div class="max-w-3xl mx-auto space-y-6">
+                
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg border-l-4 border-sre-orange">
+                    <h3 class="text-2xl font-bold text-sre-black mb-2">ROUNDS</h3>
+                    <p class="text-lg font-semibold text-gray-700">6mm UPTO 350mm dia</p>
+                </div>
+
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg border-l-4 border-sre-orange">
+                    <h3 class="text-2xl font-bold text-sre-black mb-2">SQUARES</h3>
+                    <p class="text-lg font-semibold text-gray-700">6mm UPTO 125mm</p>
+                </div>
+
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg border-l-4 border-sre-orange">
+                    <h3 class="text-2xl font-bold text-sre-black mb-2">FLATS</h3>
+                    <p class="text-lg font-semibold text-gray-700">19mm x 5mm UPTO 200mm x 32mm</p>
+                </div>
+
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg border-l-4 border-sre-orange">
+                    <h3 class="text-2xl font-bold text-sre-black mb-2">HEX</h3>
+                    <p class="text-lg font-semibold text-gray-700">6mm UPTO 75mm</p>
+                </div>
             </div>
+        </div>
     </section>
 
-    <section id="facilities" class="py-20 bg-sre-white">
+    <section id="facilities" class="py-20 bg-gray-100">
         <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-10 text-sre-black">FACILITIES</h2>
+            <h2 class="text-4xl font-bold text-center mb-10 text-sre-black">OUR OPERATIONS & LOGISTICS</h2>
+            
+            <div class="max-w-4xl mx-auto bg-sre-black text-sre-white p-8 rounded-xl shadow-2xl space-y-6">
+                <p class="text-xl font-light leading-relaxed">
+                    Our commitment is to provide full-service, quality solutions, backed by a robust, integrated trading and manufacturing framework.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t border-gray-700">
+                    <div class="space-y-2">
+                        <h3 class="text-2xl font-bold text-sre-orange">ADVANCED INFRASTRUCTURE</h3>
+                        <p class="text-lg">Supported by a substantial <span class="font-bold">40,000 sq ft warehouse</span> fully equipped with cranes, alongside advanced CNC cutting facilities.</p>
+                    </div>
+                    <div class="space-y-2">
+                        <h3 class="text-2xl font-bold text-sre-orange">SEAMLESS SOURCING & DELIVERY</h3>
+                        <p class="text-lg">We partner with all leading Iron and Steel manufacturers in and around Tamil Nadu, guaranteeing <span class="font-bold">reliable transportation and doorstep delivery</span> of all products.</p>
+                    </div>
+                </div>
             </div>
+        </div>
     </section>
-    
+
+    <section id="contact" class="py-20 bg-sre-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-10 text-sre-black">CONTACT US</h2>
+            
+            <div class="max-w-3xl mx-auto bg-gray-100 p-8 rounded-xl shadow-2xl border-t-8 border-sre-orange space-y-6 text-center">
+                
+                <h3 class="text-3xl font-bold text-sre-black">Get in Touch Directly</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <p class="text-sre-orange font-bold text-xl">Amit Bansal</p>
+                        <a href="tel:9842214646" class="text-2xl text-gray-800 font-medium hover:text-sre-orange transition duration-200">📞 98422-14646</a>
+                    </div>
+
+                    <div>
+                        <p class="text-sre-orange font-bold text-xl">Saurav Lohia</p>
+                        <a href="tel:8489991937" class="text-2xl text-gray-800 font-medium hover:text-sre-orange transition duration-200">📞 84899-91937</a>
+                    </div>
+                </div>
+
+                <div class="pt-6 border-t border-gray-300">
+                    <p class="text-sre-orange font-bold text-xl mb-2">PHYSICAL ADDRESS</p>
+                    <p class="text-gray-800 text-lg">7/2, DVP Industrial Estate, Athipalayam Road, Chinnavedampatti, Ganapathy, Coimbatore - 641006</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <footer class="bg-sre-black text-white py-10 text-center">
         <p>&copy; <span id="current-year"></span> SRI RANISATI ENTERPRISES. All rights reserved.</p>
     </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const menuButton = document.querySelector('nav button');
+            const menuButton = document.getElementById('menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
             
             // Toggle Mobile Menu
             menuButton.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Close mobile menu when a link is clicked
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
             });
 
             // Set current year in the footer

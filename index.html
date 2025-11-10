@@ -21,7 +21,6 @@
         }
     </script>
     <style>
-        /* FIX: Prevents fixed navigation bar from overlapping content when using anchor links (#home, #grades, etc.) */
         section {
             padding-top: 5rem;
             scroll-margin-top: 4rem; 
@@ -43,17 +42,14 @@
             background-size: cover;
             background-position: center;
         }
-        /* NEW: Text shadow for better readability against detailed backgrounds */
         .text-outline {
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
         }
-        /* FINAL BACKGROUND IMAGE FIX: Using Cloudinary URL for production */
         #home {
-            /* Factory Background (CLOUDINARY) */
             background-image: url('https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765432/IMG_8563_kj9z9i.webp'); 
             background-size: cover;
             background-position: center;
-            background-color: #1a1a1a; /* Fallback color */
+            background-color: #1a1a1a;
         }
     </style>
 </head>
@@ -140,8 +136,7 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
                 
                 <div class="relative bg-sre-black text-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300 col-span-1 lg:col-span-2">
-                    <div class="h-64 bg-gray-700 flex items-center justify-center bg-cover-center" style="background-image: url('https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765432/cap-auto-360.webp');">
-                        <span class="text-lg text-sre-orange font-bold px-4 py-2 bg-sre-black bg-opacity-75 rounded">SEMI AUTOMATIC MACHINE</span>
+                    <div class="h-64 bg-gray-700 flex items-center justify-center bg-cover-center" style="background-image: url('https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765429/Semi_auto_-_upto_360_dia_vw5gjd.webp');">
                     </div>
                     <div class="p-4 text-center">
                         <h3 class="text-2xl font-bold mb-1 uppercase">SEMI AUTOMATIC CUTTING</h3>
@@ -150,8 +145,7 @@
                 </div>
 
                 <div class="relative bg-sre-black text-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300">
-                    <div class="h-64 bg-gray-700 flex items-center justify-center bg-cover-center" style="background-image: url('https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765432/cap-saw-210.webp');">
-                        <span class="text-lg text-sre-orange font-bold px-4 py-2 bg-sre-black bg-opacity-75 rounded">CIRCULAR SAW</span>
+                    <div class="h-64 bg-gray-700 flex items-center justify-center bg-cover-center" style="background-image: url('https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765432/Cutting_Saw_upto_210_dia_icrdvl.webp');">
                     </div>
                     <div class="p-4 text-center">
                         <h3 class="text-xl font-bold mb-1 uppercase">CIRCULAR SAW</h3>
@@ -160,8 +154,7 @@
                 </div>
 
                 <div class="relative bg-sre-black text-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300">
-                    <div class="h-64 bg-gray-700 flex items-center justify-center bg-cover-center" style="background-image: url('https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765432/cap-saw-130.webp');">
-                        <span class="text-lg text-sre-orange font-bold px-4 py-2 bg-sre-black bg-opacity-75 rounded">CIRCULAR SAW</span>
+                    <div class="h-64 bg-gray-700 flex items-center justify-center bg-cover-center" style="background-image: url('https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765432/Circular_saw._wrtk1h.webp');">
                     </div>
                     <div class="p-4 text-center">
                         <h3 class="text-xl font-bold mb-1 uppercase">CIRCULAR SAW</h3>
@@ -170,8 +163,7 @@
                 </div>
 
                 <div class="relative bg-sre-black text-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300">
-                    <div class="h-64 bg-gray-700 flex items-center justify-center bg-cover-center" style="background-image: url('https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765432/cap-saw-85.webp');">
-                        <span class="text-lg text-sre-orange font-bold px-4 py-2 bg-sre-black bg-opacity-75 rounded">CIRCULAR SAW</span>
+                    <div class="h-64 bg-gray-700 flex items-center justify-center bg-cover-center" style="background-image: url('https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765431/Circular_saw_-_upto_85_dia_yxpnrf.webp');">
                     </div>
                     <div class="p-4 text-center">
                         <h3 class="text-xl font-bold mb-1 uppercase">CIRCULAR SAW</h3>
@@ -180,8 +172,7 @@
                 </div>
 
                 <div class="relative bg-sre-black text-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300">
-                    <div class="h-64 bg-gray-700 flex items-center justify-center bg-cover-center" style="background-image: url('https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765432/cap-saw-80.webp');">
-                        <span class="text-lg text-sre-orange font-bold px-4 py-2 bg-sre-black bg-opacity-75 rounded">CIRCULAR SAW</span>
+                    <div class="h-64 bg-gray-700 flex items-center justify-center bg-cover-center" style="background-image: url('https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765432/Circular_saw_upto_80_dia_uygsvu.webp');">
                     </div>
                     <div class="p-4 text-center">
                         <h3 class="text-xl font-bold mb-1 uppercase">CIRCULAR SAW</h3>
@@ -224,49 +215,49 @@
             <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 
                 <div class="bg-sre-black text-white rounded-lg overflow-hidden shadow-xl transform hover:shadow-2xl transition duration-300">
-                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765432/prod-bright-round.svg" alt="Bright Finish Round Steel Stock" class="w-full h-32 object-cover object-center">
+                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765433/BRIGHT_ROUND_ixzeup.webp" alt="Bright Finish Round Steel Stock" class="w-full h-32 object-cover object-center">
                     <div class="p-4 text-center">
                         <h3 class="text-xl font-bold text-sre-orange">BRIGHT ROUND</h3>
                     </div>
                 </div>
                 
                 <div class="bg-sre-black text-white rounded-lg overflow-hidden shadow-xl transform hover:shadow-2xl transition duration-300">
-                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765432/prod-black-round.svg" alt="Black Finish Round Steel Stock" class="w-full h-32 object-cover object-center">
+                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765434/BLACK_ROUND_coqy8b.webp" alt="Black Finish Round Steel Stock" class="w-full h-32 object-cover object-center">
                     <div class="p-4 text-center">
                         <h3 class="text-xl font-bold text-sre-orange">BLACK ROUND</h3>
                     </div>
                 </div>
 
                 <div class="bg-sre-black text-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300">
-                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765432/prod-bright-square.svg" alt="Bright Finish Square Steel Stock" class="w-full h-32 object-cover object-center">
+                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765432/BRIGHT_SQUARE_svssrv.webp" alt="Bright Finish Square Steel Stock" class="w-full h-32 object-cover object-center">
                     <div class="p-4 text-center">
                         <h3 class="text-xl font-bold text-sre-orange">BRIGHT SQUARE</h3>
                     </div>
                 </div>
 
                 <div class="bg-sre-black text-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300">
-                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765432/prod-black-square.svg" alt="Black Finish Square Steel Stock" class="w-full h-32 object-cover object-center">
+                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765433/BLACK_SQUARE_n5jrjd.webp" alt="Black Finish Square Steel Stock" class="w-full h-32 object-cover object-center">
                     <div class="p-4 text-center">
                         <h3 class="text-xl font-bold text-sre-orange">BLACK SQUARE</h3>
                     </div>
                 </div>
 
                 <div class="relative bg-sre-black text-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300">
-                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765432/prod-bright-hex.svg" alt="Bright Finish Hexagonal Steel Stock" class="w-full h-32 object-cover object-center">
+                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765433/BRIGHT_HEX_hfqc6a.webp" alt="Bright Finish Hexagonal Steel Stock" class="w-full h-32 object-cover object-center">
                     <div class="p-4 text-center">
                         <h3 class="text-xl font-bold text-sre-orange">BRIGHT HEX</h3>
                     </div>
                 </div>
 
                 <div class="relative bg-sre-black text-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300">
-                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765432/prod-bright-flat.svg" alt="Bright Finish Flat Steel Stock" class="w-full h-32 object-cover object-center">
+                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765433/BRIGHT_FLAT_qyslkd.webp" alt="Bright Finish Flat Steel Stock" class="w-full h-32 object-cover object-center">
                     <div class="p-4 text-center">
                         <h3 class="text-xl font-bold text-sre-orange">BRIGHT FLAT</h3>
                     </div>
                 </div>
                 
                 <div class="relative bg-sre-black text-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300">
-                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765432/prod-rough-flat.svg" alt="Rough Finish Flat Steel Stock" class="w-full h-32 object-cover object-center">
+                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765431/ROUGH_FLAT_ll88bm.webp" alt="Rough Finish Flat Steel Stock" class="w-full h-32 object-cover object-center">
                     <div class="p-4 text-center">
                         <h3 class="text-xl font-bold text-sre-orange">ROUGH FLAT</h3>
                     </div>

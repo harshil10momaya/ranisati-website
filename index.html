@@ -21,6 +21,7 @@
         }
     </script>
     <style>
+        /* FIX: Prevents fixed navigation bar from overlapping content when using anchor links (#home, #grades, etc.) */
         section {
             padding-top: 5rem;
             scroll-margin-top: 4rem; 
@@ -42,14 +43,17 @@
             background-size: cover;
             background-position: center;
         }
+        /* NEW: Text shadow for better readability against detailed backgrounds */
         .text-outline {
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
         }
+        /* FINAL BACKGROUND IMAGE FIX: Using Cloudinary URL for production */
         #home {
+            /* Factory Background (CLOUDINARY) - Use this URL for your final site */
             background-image: url('https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765432/IMG_8563_kj9z9i.webp'); 
             background-size: cover;
             background-position: center;
-            background-color: #1a1a1a;
+            background-color: #1a1a1a; /* Fallback color */
         }
     </style>
 </head>
@@ -110,17 +114,29 @@
     </header>
     
     <section id="about" class="py-20 bg-sre-white">
-        <div class="container mx-auto px-4 max-w-5xl">
-            <h2 class="text-4xl font-bold text-center mb-8 text-sre-black border-b-2 border-sre-orange inline-block mx-auto pb-2">ABOUT US</h2>
-            <div class="space-y-6 text-lg text-gray-700 leading-relaxed mt-6">
-                <p>
-                    Sri Ranisati Enterprises is an established specialist in <span class="font-bold">Iron and Steel trading and manufacturing</span> in Coimbatore, bringing <span class="font-bold">over 15+ years</span> of valuable market experience.
+        <div class="container mx-auto px-4 max-w-6xl">
+            
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-sre-black inline-block">ABOUT US</h2>
+            </div>
+            
+            <div class="bg-sre-black p-8 md:p-12 rounded-xl shadow-2xl text-lg text-sre-white leading-relaxed max-w-5xl mx-auto">
+                
+                <p class="mb-6">
+                    Sri Ranisati Enterprises is an established specialist in <span class="font-bold text-sre-white">Iron and Steel trading and manufacturing</span> in Coimbatore, bringing <span class="font-bold text-sre-orange">over 15+ years</span> of valuable market experience. From our start in a small warehouse in 2010, we've transformed into a robust, integrated trading and manufacturing business committed to providing full-service, quality solutions.
                 </p>
-                <p>
-                    From our start in a small warehouse in <span class="font-bold">2010</span>, we've transformed into a robust, integrated trading and manufacturing business committed to providing full-service, quality solutions. We don't just deliver iron and steel—we <span class="font-bold">precision cut, process, and finish it to your exact needs.</span>
+
+                <p class="mb-8 text-xl font-medium">
+                    We go beyond simple material supply; we don't just deliver iron and steel—we <span class="font-extrabold text-sre-orange">precision cut, process, and finish it to your exact needs.</span>
                 </p>
-                <div class="text-center bg-gray-100 p-4 rounded-lg border-l-4 border-sre-orange font-semibold">
-                    We partner with all leading Iron and Steel manufacturers in and around Tamil Nadu to ensure seamless sourcing, and we guarantee reliable transportation and doorstep delivery of all products.
+
+                <div class="space-y-4 border-t pt-6 border-gray-700">
+                    <p>
+                        Our operations are supported by a substantial <span class="font-bold text-sre-orange">40,000 sq ft warehouse</span> fully equipped with cranes, alongside advanced CNC cutting facilities capable of handling diameters from 20 dia up to 350 dia.
+                    </p>
+                    <p>
+                        We partner with all leading Iron and Steel manufacturers in and around Tamil Nadu to ensure seamless sourcing, and we guarantee <span class="font-bold text-sre-orange">reliable transportation and doorstep delivery</span> of all products.
+                    </p>
                 </div>
             </div>
         </div>
@@ -129,52 +145,50 @@
     <section id="capabilities" class="py-20 bg-gray-100">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center mb-4 text-sre-black">OUR PRECISION CAPABILITIES</h2>
+            
             <p class="text-xl text-center max-w-3xl mx-auto mb-12 text-gray-600">
                 Our operations are supported by advanced CNC cutting facilities. We have a range of specialized machinery equipped to cut materials in various sizes, ensuring precision and reliability.
             </p>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
                 
-                <div class="relative bg-sre-black text-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300 col-span-1 lg:col-span-2">
-                    <div class="h-64 bg-gray-700 flex items-center justify-center bg-cover-center" style="background-image: url('https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765429/Semi_auto_-_upto_360_dia_vw5gjd.webp');">
+                <div class="relative bg-sre-black text-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300 col-span-1">
+                    <div class="h-32 bg-gray-700 flex items-center justify-center bg-cover-center" 
+                         style="background-image: url('https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765429/Semi_auto_-_upto_360_dia_vw5gjd.webp');">
                     </div>
-                    <div class="p-4 text-center">
-                        <h3 class="text-2xl font-bold mb-1 uppercase">SEMI AUTOMATIC CUTTING</h3>
-                        <p class="text-sre-orange text-xl">Capacity: <span class="font-bold">Upto 360 dia</span></p>
+                    <div class="p-4 text-center h-24 flex flex-col justify-center">
+                        <h3 class="text-xl font-bold mb-1 uppercase">SEMI AUTOMATIC CUTTING</h3>
+                        <p class="text-sre-orange text-lg">Capacity: <span class="font-bold">Upto 360 dia</span></p>
                     </div>
                 </div>
-
-                <div class="relative bg-sre-black text-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300">
-                    <div class="h-64 bg-gray-700 flex items-center justify-center bg-cover-center" style="background-image: url('https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765432/Cutting_Saw_upto_210_dia_icrdvl.webp');">
-                    </div>
-                    <div class="p-4 text-center">
+                
+                <div class="relative bg-sre-black text-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300 col-span-1">
+                    <div class="h-32 bg-gray-700 flex items-center justify-center bg-cover-center" style="background-image: url('https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765432/Cutting_Saw_upto_210_dia_icrdvl.webp');"></div>
+                    <div class="p-4 text-center h-24 flex flex-col justify-center">
                         <h3 class="text-xl font-bold mb-1 uppercase">CIRCULAR SAW</h3>
                         <p class="text-sre-orange text-lg">Capacity: <span class="font-bold">Upto 210 dia</span></p>
                     </div>
                 </div>
 
-                <div class="relative bg-sre-black text-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300">
-                    <div class="h-64 bg-gray-700 flex items-center justify-center bg-cover-center" style="background-image: url('https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765432/Circular_saw._wrtk1h.webp');">
-                    </div>
-                    <div class="p-4 text-center">
+                <div class="relative bg-sre-black text-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300 col-span-1">
+                    <div class="h-32 bg-gray-700 flex items-center justify-center bg-cover-center" style="background-image: url('https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765432/Circular_saw._wrtk1h.webp');"></div>
+                    <div class="p-4 text-center h-24 flex flex-col justify-center">
                         <h3 class="text-xl font-bold mb-1 uppercase">CIRCULAR SAW</h3>
                         <p class="text-sre-orange text-lg">Capacity: <span class="font-bold">Upto 130 dia</span></p>
                     </div>
                 </div>
 
-                <div class="relative bg-sre-black text-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300">
-                    <div class="h-64 bg-gray-700 flex items-center justify-center bg-cover-center" style="background-image: url('https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765431/Circular_saw_-_upto_85_dia_yxpnrf.webp');">
-                    </div>
-                    <div class="p-4 text-center">
+                <div class="relative bg-sre-black text-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300 col-span-1">
+                    <div class="h-32 bg-gray-700 flex items-center justify-center bg-cover-center" style="background-image: url('https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765431/Circular_saw_-_upto_85_dia_yxpnrf.webp');"></div>
+                    <div class="p-4 text-center h-24 flex flex-col justify-center">
                         <h3 class="text-xl font-bold mb-1 uppercase">CIRCULAR SAW</h3>
                         <p class="text-sre-orange text-lg">Capacity: <span class="font-bold">Upto 85 dia</span></p>
                     </div>
                 </div>
 
-                <div class="relative bg-sre-black text-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300">
-                    <div class="h-64 bg-gray-700 flex items-center justify-center bg-cover-center" style="background-image: url('https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765432/Circular_saw_upto_80_dia_uygsvu.webp');">
-                    </div>
-                    <div class="p-4 text-center">
+                <div class="relative bg-sre-black text-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300 col-span-1">
+                    <div class="h-32 bg-gray-700 flex items-center justify-center bg-cover-center" style="background-image: url('https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765432/Circular_saw_upto_80_dia_uygsvu.webp');"></div>
+                    <div class="p-4 text-center h-24 flex flex-col justify-center">
                         <h3 class="text-xl font-bold mb-1 uppercase">CIRCULAR SAW</h3>
                         <p class="text-sre-orange text-lg">Capacity: <span class="font-bold">Upto 80 dia</span></p>
                     </div>
@@ -214,52 +228,55 @@
             
             <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 
-                <div class="bg-sre-black text-white rounded-lg overflow-hidden shadow-xl transform hover:shadow-2xl transition duration-300">
+                <div class="bg-sre-black text-white rounded-lg overflow-hidden shadow-xl transform hover:shadow-2xl transition duration-300 col-span-1">
                     <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765433/BRIGHT_ROUND_ixzeup.webp" alt="Bright Finish Round Steel Stock" class="w-full h-32 object-cover object-center">
-                    <div class="p-4 text-center">
+                    <div class="p-4 text-center h-16 flex flex-col justify-center">
                         <h3 class="text-xl font-bold text-sre-orange">BRIGHT ROUND</h3>
                     </div>
                 </div>
                 
-                <div class="bg-sre-black text-white rounded-lg overflow-hidden shadow-xl transform hover:shadow-2xl transition duration-300">
+                <div class="bg-sre-black text-white rounded-lg overflow-hidden shadow-xl transform hover:shadow-2xl transition duration-300 col-span-1">
                     <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765434/BLACK_ROUND_coqy8b.webp" alt="Black Finish Round Steel Stock" class="w-full h-32 object-cover object-center">
-                    <div class="p-4 text-center">
+                    <div class="p-4 text-center h-16 flex flex-col justify-center">
                         <h3 class="text-xl font-bold text-sre-orange">BLACK ROUND</h3>
                     </div>
                 </div>
 
-                <div class="bg-sre-black text-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300">
+                <div class="bg-sre-black text-white rounded-lg overflow-hidden shadow-xl transform hover:shadow-2xl transition duration-300 col-span-1">
                     <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765432/BRIGHT_SQUARE_svssrv.webp" alt="Bright Finish Square Steel Stock" class="w-full h-32 object-cover object-center">
-                    <div class="p-4 text-center">
+                    <div class="p-4 text-center h-16 flex flex-col justify-center">
                         <h3 class="text-xl font-bold text-sre-orange">BRIGHT SQUARE</h3>
                     </div>
                 </div>
 
-                <div class="bg-sre-black text-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300">
+                <div class="bg-sre-black text-white rounded-lg overflow-hidden shadow-xl transform hover:shadow-2xl transition duration-300 col-span-1">
                     <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765433/BLACK_SQUARE_n5jrjd.webp" alt="Black Finish Square Steel Stock" class="w-full h-32 object-cover object-center">
-                    <div class="p-4 text-center">
+                    <div class="p-4 text-center h-16 flex flex-col justify-center">
                         <h3 class="text-xl font-bold text-sre-orange">BLACK SQUARE</h3>
                     </div>
                 </div>
-
-                <div class="relative bg-sre-black text-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300">
-                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765433/BRIGHT_HEX_hfqc6a.webp" alt="Bright Finish Hexagonal Steel Stock" class="w-full h-32 object-cover object-center">
-                    <div class="p-4 text-center">
-                        <h3 class="text-xl font-bold text-sre-orange">BRIGHT HEX</h3>
-                    </div>
-                </div>
-
-                <div class="relative bg-sre-black text-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300">
-                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765433/BRIGHT_FLAT_qyslkd.webp" alt="Bright Finish Flat Steel Stock" class="w-full h-32 object-cover object-center">
-                    <div class="p-4 text-center">
-                        <h3 class="text-xl font-bold text-sre-orange">BRIGHT FLAT</h3>
-                    </div>
-                </div>
                 
-                <div class="relative bg-sre-black text-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300">
-                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765431/ROUGH_FLAT_ll88bm.webp" alt="Rough Finish Flat Steel Stock" class="w-full h-32 object-cover object-center">
-                    <div class="p-4 text-center">
-                        <h3 class="text-xl font-bold text-sre-orange">ROUGH FLAT</h3>
+                <div class="col-span-4 lg:col-span-4 flex justify-center space-x-6 w-full mt-6 lg:mt-0">
+
+                    <div class="relative bg-sre-black text-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300 w-full sm:max-w-xs">
+                        <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765433/BRIGHT_HEX_hfqc6a.webp" alt="Bright Finish Hexagonal Steel Stock" class="w-full h-32 object-cover object-center">
+                        <div class="p-4 text-center h-16 flex flex-col justify-center">
+                            <h3 class="text-xl font-bold text-sre-orange">BRIGHT HEX</h3>
+                        </div>
+                    </div>
+
+                    <div class="relative bg-sre-black text-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300 w-full sm:max-w-xs">
+                        <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765433/BRIGHT_FLAT_qyslkd.webp" alt="Bright Finish Flat Steel Stock" class="w-full h-32 object-cover object-center">
+                        <div class="p-4 text-center h-16 flex flex-col justify-center">
+                            <h3 class="text-xl font-bold text-sre-orange">BRIGHT FLAT</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="relative bg-sre-black text-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300 w-full sm:max-w-xs">
+                        <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765431/ROUGH_FLAT_ll88bm.webp" alt="Rough Finish Flat Steel Stock" class="w-full h-32 object-cover object-center">
+                        <div class="p-4 text-center h-16 flex flex-col justify-center">
+                            <h3 class="text-xl font-bold text-sre-orange">ROUGH FLAT</h3>
+                        </div>
                     </div>
                 </div>
                 

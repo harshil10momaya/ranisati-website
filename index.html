@@ -22,7 +22,6 @@
         }
     </script>
     <style>
-        /* FIX: Prevents fixed navigation bar from overlapping content when using anchor links (#home, #grades, etc.) */
         section {
             padding-top: 5rem;
             scroll-margin-top: 4rem; 
@@ -56,6 +55,21 @@
             background-position: center;
             background-color: #1a1a1a; /* Fallback color */
         }
+        /* New: Gradient bottom border for Why Choose Us tiles */
+        .gradient-border-bottom {
+            position: relative;
+            overflow: hidden; /* Important for the pseudo-element to stay within bounds */
+            padding-bottom: 10px; /* Add some padding so content doesn't touch the gradient */
+        }
+        .gradient-border-bottom::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px; /* Thickness of the border */
+            background: linear-gradient(to right, #D97706, #E08722, #F4A142); /* Your orange gradient */
+        }
     </style>
 </head>
 <body class="bg-sre-white text-gray-800">
@@ -74,7 +88,6 @@
                         <a href="#grades" class="hover:text-sre-orange px-3 py-2 rounded-md transition duration-200">GRADES</a>
                         <a href="#products" class="hover:text-sre-orange px-3 py-2 rounded-md transition duration-200">PRODUCT RANGE</a>
                         <a href="#sizes" class="hover:text-sre-orange px-3 py-2 rounded-md transition duration-200">SIZES</a>
-                        <a href="#facilities" class="hover:text-sre-orange px-3 py-2 rounded-md transition duration-200">FACILITIES</a>
                         <a href="#contact" class="hover:text-sre-orange px-3 py-2 rounded-md transition duration-200">CONTACT US</a>
                     </div>
                 </div>
@@ -91,7 +104,6 @@
                 <a href="#grades" class="mobile-link text-sre-white hover:bg-gray-700 hover:text-sre-orange block px-3 py-2 rounded-md text-base font-medium">GRADES</a>
                 <a href="#products" class="mobile-link text-sre-white hover:bg-gray-700 hover:text-sre-orange block px-3 py-2 rounded-md text-base font-medium">PRODUCT RANGE</a>
                 <a href="#sizes" class="mobile-link text-sre-white hover:bg-gray-700 hover:text-sre-orange block px-3 py-2 rounded-md text-base font-medium">SIZES</a>
-                <a href="#facilities" class="mobile-link text-sre-white hover:bg-gray-700 hover:text-sre-orange block px-3 py-2 rounded-md text-base font-medium">FACILITIES</a>
                 <a href="#contact" class="mobile-link text-sre-white hover:bg-gray-700 hover:text-sre-orange block px-3 py-2 rounded-md text-base font-medium">CONTACT US</a>
             </div>
         </div>
@@ -114,6 +126,65 @@
         </div>
     </header>
     
+    <section id="why-choose-us" class="py-20 bg-sre-white text-gray-800">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <h2 class="text-4xl font-bold text-center mb-10 text-sre-black">WHY CHOOSE US</h2>
+            <p class="text-lg text-center max-w-4xl mx-auto mb-12 text-gray-600">Our expertise in iron and steel manufacturing and trading ensures you receive superior products and service on every order.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+                
+                <div class="p-6 bg-sre-black text-sre-white rounded-xl shadow-lg gradient-border-bottom">
+                    <i class="fa-solid fa-medal text-4xl text-sre-orange mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">BEST QUALITY</h3>
+                    <p class="leading-relaxed text-sre-white">
+                        Our steel stands for more than just strength — it reflects precision, consistency, and excellence in every batch we deliver.
+                    </p>
+                </div>
+                
+                <div class="p-6 bg-sre-black text-sre-white rounded-xl shadow-lg gradient-border-bottom">
+                    <i class="fa-solid fa-clock text-4xl text-sre-orange mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">TIME TARGETS</h3>
+                    <p class="leading-relaxed text-sre-white">
+                        Driven by efficiency and teamwork, we ensure every order is delivered right on schedule. For added convenience, we also provide our own delivery vehicle service within Coimbatore.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-sre-black text-sre-white rounded-xl shadow-lg gradient-border-bottom">
+                    <i class="fa-solid fa-thumbs-up text-4xl text-sre-orange mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">HAPPY CUSTOMERS</h3>
+                    <p class="leading-relaxed text-sre-white">
+                        We take pride in having over 999+ happy clients who trust our commitment to quality and timely service.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-sre-black text-sre-white rounded-xl shadow-lg gradient-border-bottom">
+                    <i class="fa-solid fa-handshake text-4xl text-sre-orange mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">STRATEGY</h3>
+                    <p class="leading-relaxed text-sre-white">
+                        Our approach is simple — consistent quality, dependable delivery, and fair pricing you can count on.
+                    </p>
+                </div>
+                
+                <div class="p-6 bg-sre-black text-sre-white rounded-xl shadow-lg gradient-border-bottom">
+                    <i class="fa-solid fa-truck text-4xl text-sre-orange mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">RELIABLE SUPPLIERS</h3>
+                    <p class="leading-relaxed text-sre-white">
+                        We supply premium JSW and VSP rounds and source top-grade materials from China and Korea to meet diverse needs.
+                    </p>
+                </div>
+                
+                <div class="p-6 bg-sre-black text-sre-white rounded-xl shadow-lg gradient-border-bottom">
+                    <i class="fa-solid fa-award text-4xl text-sre-orange mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">INTEGRITY</h3>
+                    <p class="leading-relaxed text-sre-white">
+                        With years of industry experience, we’ve earned our reputation through honesty, expertise, and reliability.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <section id="about" class="py-20 bg-sre-white">
         <div class="container mx-auto px-4 max-w-6xl">
             
@@ -310,28 +381,6 @@
                 <div class="bg-sre-black text-sre-white p-4 rounded-lg shadow-lg border-b-4 border-sre-orange h-32 flex flex-col justify-center">
                     <h3 class="text-2xl font-bold mb-1">HEX</h3>
                     <p class="text-lg font-semibold">6mm UPTO 75mm</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="facilities" class="py-20 bg-sre-black text-sre-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-10">OUR OPERATIONS & LOGISTICS</h2>
-            
-            <div class="max-w-4xl mx-auto bg-gray-800 text-sre-white p-8 rounded-xl shadow-2xl space-y-6">
-                <p class="text-xl font-light leading-relaxed">
-                    Our commitment is to provide full-service, quality solutions, backed by a robust, integrated trading and manufacturing framework.
-                </p>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t border-gray-700">
-                    <div class="space-y-2">
-                        <h3 class="text-2xl font-bold text-sre-orange">ADVANCED INFRASTRUCTURE</h3>
-                        <p class="text-lg">Supported by a substantial <span class="font-bold">40,000 sq ft warehouse</span> fully equipped with cranes, alongside advanced CNC cutting facilities.</p>
-                    </div>
-                    <div class="space-y-2">
-                        <h3 class="text-2xl font-bold text-sre-orange">SEAMLESS SOURCING & DELIVERY</h3>
-                        <p class="text-lg">We partner with all leading Iron and Steel manufacturers in and around Tamil Nadu, guaranteeing <span class="font-bold">reliable transportation and doorstep delivery</span> of all products.</p>
-                    </div>
                 </div>
             </div>
         </div>

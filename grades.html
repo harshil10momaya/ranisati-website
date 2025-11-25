@@ -16,6 +16,8 @@
                         'sre-black': '#1a1a1a',
                         'sre-orange': '#D97706',
                         'sre-white': '#f5f5f5',
+                        'sre-card-dark': '#3a3a3a', 
+                        'sre-bg-dark': '#2b2b2b',
                     }
                 }
             }
@@ -36,9 +38,23 @@
         ::-webkit-scrollbar-track {
             background: #1a1a1a;
         }
+        .carousel-track {
+            animation: scroll 30s linear infinite;
+            display: flex;
+            gap: 2rem;
+            width: max-content;
+        }
+        @keyframes scroll {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-50%);
+            }
+        }
     </style>
 </head>
-<body class="bg-sre-black text-sre-white">
+<body class="bg-sre-bg-dark text-sre-white">
 
     <nav class="fixed top-0 left-0 right-0 z-50 bg-sre-black text-white shadow-lg">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -54,8 +70,7 @@
                         <a href="grades.html" class="hover:text-sre-orange px-3 py-2 rounded-md transition duration-200">GRADES</a>
                         <a href="products.html" class="hover:text-sre-orange px-3 py-2 rounded-md transition duration-200">PRODUCT RANGE</a>
                         <a href="sizes.html" class="hover:text-sre-orange px-3 py-2 rounded-md transition duration-200">SIZES</a>
-                        <a href="capabilities.html" class="hover:text-sre-orange px-3 py-2 rounded-md transition duration-200">FACILITIES</a>
-                        <a href="grades.html#contact" class="hover:text-sre-orange px-3 py-2 rounded-md transition duration-200">CONTACT US</a>
+                        <a href="index.html#contact" class="hover:text-sre-orange px-3 py-2 rounded-md transition duration-200">CONTACT US</a>
                     </div>
                 </div>
                 <div class="md:hidden">
@@ -71,35 +86,52 @@
                 <a href="grades.html" class="mobile-link text-sre-white hover:bg-gray-700 hover:text-sre-orange block px-3 py-2 rounded-md text-base font-medium">GRADES</a>
                 <a href="products.html" class="mobile-link text-sre-white hover:bg-gray-700 hover:text-sre-orange block px-3 py-2 rounded-md text-base font-medium">PRODUCT RANGE</a>
                 <a href="sizes.html" class="mobile-link text-sre-white hover:bg-gray-700 hover:text-sre-orange block px-3 py-2 rounded-md text-base font-medium">SIZES</a>
-                        <a href="capabilities.html" class="mobile-link text-sre-white hover:bg-gray-700 hover:text-sre-orange block px-3 py-2 rounded-md text-base font-medium">FACILITIES</a>
-                <a href="grades.html#contact" class="mobile-link text-sre-white hover:bg-gray-700 hover:text-sre-orange block px-3 py-2 rounded-md text-base font-medium">CONTACT US</a>
+                <a href="index.html#contact" class="mobile-link text-sre-white hover:bg-gray-700 hover:text-sre-orange block px-3 py-2 rounded-md text-base font-medium">CONTACT US</a>
             </div>
         </div>
     </nav>
     
-    <section id="grades" class="py-20 bg-sre-black text-sre-white pt-24">
+    <section id="grades" class="py-20 bg-sre-bg-dark text-sre-white pt-24">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center mb-10 text-sre-white">OUR STANDARD GRADES</h2>
             <p class="text-lg text-center max-w-4xl mx-auto mb-8 text-gray-300">We stock a comprehensive range of quality steel grades to meet the diverse requirements of industrial, manufacturing, and construction projects across Tamil Nadu.</p>
             <div class="max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4">
                 
-                <div class="bg-gray-800 text-sre-white p-4 rounded-lg shadow-md text-center font-semibold border-b-4 border-sre-orange flex items-center justify-center min-h-[6rem]">MS ROUND (SAE1018)</div>
-                <div class="bg-gray-800 text-sre-white p-4 rounded-lg shadow-md text-center font-semibold border-b-4 border-sre-orange flex items-center justify-center min-h-[6rem]">MS ROUND (IS2062)</div>
-                <div class="bg-gray-800 text-sre-white p-4 rounded-lg shadow-md text-center font-semibold border-b-4 border-sre-orange flex items-center justify-center min-h-[6rem]">EN8</div>
-                <div class="bg-gray-800 text-sre-white p-4 rounded-lg shadow-md text-center font-semibold border-b-4 border-sre-orange flex items-center justify-center min-h-[6rem]">EN9</div>
-                <div class="bg-gray-800 text-sre-white p-4 rounded-lg shadow-md text-center font-semibold border-b-4 border-sre-orange flex items-center justify-center min-h-[6rem]">EN19</div>
-                <div class="bg-gray-800 text-sre-white p-4 rounded-lg shadow-md text-center font-semibold border-b-4 border-sre-orange flex items-center justify-center min-h-[6rem]">20MNCR5</div>
-                <div class="bg-gray-800 text-sre-white p-4 rounded-lg shadow-md text-center font-semibold border-b-4 border-sre-orange flex items-center justify-center min-h-[6rem]">EN24</div>
-                <div class="bg-gray-800 text-sre-white p-4 rounded-lg shadow-md text-center font-semibold border-b-4 border-sre-orange flex items-center justify-center min-h-[6rem]">EN353</div>
+                <div class="bg-sre-card-dark text-sre-white p-4 rounded-lg shadow-md text-center font-semibold border-b-4 border-sre-orange flex items-center justify-center min-h-[6rem]">MS ROUND (SAE1018)</div>
+                <div class="bg-sre-card-dark text-sre-white p-4 rounded-lg shadow-md text-center font-semibold border-b-4 border-sre-orange flex items-center justify-center min-h-[6rem]">MS ROUND (IS2062)</div>
+                <div class="bg-sre-card-dark text-sre-white p-4 rounded-lg shadow-md text-center font-semibold border-b-4 border-sre-orange flex items-center justify-center min-h-[6rem]">EN8</div>
+                <div class="bg-sre-card-dark text-sre-white p-4 rounded-lg shadow-md text-center font-semibold border-b-4 border-sre-orange flex items-center justify-center min-h-[6rem]">EN9</div>
+                <div class="bg-sre-card-dark text-sre-white p-4 rounded-lg shadow-md text-center font-semibold border-b-4 border-sre-orange flex items-center justify-center min-h-[6rem]">EN19</div>
+                <div class="bg-sre-card-dark text-sre-white p-4 rounded-lg shadow-md text-center font-semibold border-b-4 border-sre-orange flex items-center justify-center min-h-[6rem]">20MNCR5</div>
+                <div class="bg-sre-card-dark text-sre-white p-4 rounded-lg shadow-md text-center font-semibold border-b-4 border-sre-orange flex items-center justify-center min-h-[6rem]">EN24</div>
+                <div class="bg-sre-card-dark text-sre-white p-4 rounded-lg shadow-md text-center font-semibold border-b-4 border-sre-orange flex items-center justify-center min-h-[6rem]">EN353</div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-20 bg-sre-black">
+    <section id="clients" class="py-12 bg-sre-black">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8 text-sre-white">OUR CLIENTS</h2>
+            <div class="overflow-hidden relative">
+                <div class="carousel-track">
+                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1764081698/IMG_8756_hipw5x.jpg" alt="Client Logo 1" class="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300 mx-8">
+                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1764081698/IMG_8757_tytwxp.jpg" alt="Client Logo 2" class="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300 mx-8">
+                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1764081698/IMG_8760_ml5kfg.jpg" alt="Client Logo 3" class="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300 mx-8">
+                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1764081697/IMG_8759_koem62.jpg" alt="Client Logo 4" class="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300 mx-8">
+                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1764081698/IMG_8756_hipw5x.jpg" alt="Client Logo 1" class="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300 mx-8">
+                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1764081698/IMG_8757_tytwxp.jpg" alt="Client Logo 2" class="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300 mx-8">
+                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1764081698/IMG_8760_ml5kfg.jpg" alt="Client Logo 3" class="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300 mx-8">
+                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1764081697/IMG_8759_koem62.jpg" alt="Client Logo 4" class="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300 mx-8">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-sre-bg-dark">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center mb-10 text-sre-white">CONTACT US</h2>
             
-            <div class="max-w-6xl mx-auto bg-gray-900 text-sre-white p-6 md:p-12 rounded-xl shadow-2xl border-t-8 border-sre-orange">
+            <div class="max-w-6xl mx-auto bg-sre-black text-sre-white p-6 md:p-12 rounded-xl shadow-2xl border-t-8 border-sre-orange">
                 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 text-center">
                     

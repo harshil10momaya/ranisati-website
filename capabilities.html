@@ -16,6 +16,8 @@
                         'sre-black': '#1a1a1a',
                         'sre-orange': '#D97706',
                         'sre-white': '#f5f5f5',
+                        'sre-card-dark': '#3a3a3a', 
+                        'sre-bg-dark': '#2b2b2b',
                     }
                 }
             }
@@ -40,9 +42,23 @@
             background-size: cover;
             background-position: center;
         }
+        .carousel-track {
+            animation: scroll 30s linear infinite;
+            display: flex;
+            gap: 2rem;
+            width: max-content;
+        }
+        @keyframes scroll {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-50%);
+            }
+        }
     </style>
 </head>
-<body class="bg-sre-black text-sre-white"> 
+<body class="bg-sre-bg-dark text-sre-white"> 
     <nav class="fixed top-0 left-0 right-0 z-50 bg-sre-black text-white shadow-lg">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
@@ -80,7 +96,7 @@
         </div>
     </nav>
     
-    <section id="capabilities" class="py-20 bg-sre-black text-sre-white pt-24">
+    <section id="capabilities" class="py-20 bg-sre-bg-dark text-sre-white pt-24">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center mb-4">OUR PRECISION CAPABILITIES</h2>
             
@@ -90,7 +106,7 @@
 
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
                 
-                <div class="relative bg-gray-800 text-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300 col-span-1">
+                <div class="relative bg-sre-card-dark text-sre-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300 col-span-1">
                     <div class="h-32 bg-gray-700 flex items-center justify-center bg-cover-center" 
                          style="background-image: url('https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765429/Semi_auto_-_upto_360_dia_vw5gjd.webp');">
                     </div>
@@ -100,7 +116,7 @@
                     </div>
                 </div>
                 
-                <div class="relative bg-gray-800 text-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300 col-span-1">
+                <div class="relative bg-sre-card-dark text-sre-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300 col-span-1">
                     <div class="h-32 bg-gray-700 flex items-center justify-center bg-cover-center" style="background-image: url('https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765432/Cutting_Saw_upto_210_dia_icrdvl.webp');"></div>
                     <div class="p-4 text-center h-24 flex flex-col justify-center">
                         <h3 class="text-xl font-bold mb-1 uppercase">CIRCULAR SAW</h3>
@@ -108,7 +124,7 @@
                     </div>
                 </div>
 
-                <div class="relative bg-gray-800 text-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300 col-span-1">
+                <div class="relative bg-sre-card-dark text-sre-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300 col-span-1">
                     <div class="h-32 bg-gray-700 flex items-center justify-center bg-cover-center" style="background-image: url('https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765432/Circular_saw._wrtk1h.webp');"></div>
                     <div class="p-4 text-center h-24 flex flex-col justify-center">
                         <h3 class="text-xl font-bold mb-1 uppercase">CIRCULAR SAW</h3>
@@ -116,7 +132,7 @@
                     </div>
                 </div>
 
-                <div class="relative bg-gray-800 text-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300 col-span-1">
+                <div class="relative bg-sre-card-dark text-sre-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300 col-span-1">
                     <div class="h-32 bg-gray-700 flex items-center justify-center bg-cover-center" style="background-image: url('https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765431/Circular_saw_-_upto_85_dia_yxpnrf.webp');"></div>
                     <div class="p-4 text-center h-24 flex flex-col justify-center">
                         <h3 class="text-xl font-bold mb-1 uppercase">CIRCULAR SAW</h3>
@@ -124,7 +140,7 @@
                     </div>
                 </div>
 
-                <div class="relative bg-gray-800 text-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300 col-span-1">
+                <div class="relative bg-sre-card-dark text-sre-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300 col-span-1">
                     <div class="h-32 bg-gray-700 flex items-center justify-center bg-cover-center" style="background-image: url('https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765432/Circular_saw_upto_80_dia_uygsvu.webp');"></div>
                     <div class="p-4 text-center h-24 flex flex-col justify-center">
                         <h3 class="text-xl font-bold mb-1 uppercase">CIRCULAR SAW</h3>
@@ -141,11 +157,29 @@
         </div>
     </section>
 
-    <section id="contact" class="py-20 bg-sre-black">
+    <section id="clients" class="py-12 bg-sre-black">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8 text-sre-white">OUR CLIENTS</h2>
+            <div class="overflow-hidden relative">
+                <div class="carousel-track">
+                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1764081698/IMG_8756_hipw5x.jpg" alt="Client Logo 1" class="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300 mx-8">
+                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1764081698/IMG_8757_tytwxp.jpg" alt="Client Logo 2" class="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300 mx-8">
+                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1764081698/IMG_8760_ml5kfg.jpg" alt="Client Logo 3" class="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300 mx-8">
+                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1764081697/IMG_8759_koem62.jpg" alt="Client Logo 4" class="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300 mx-8">
+                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1764081698/IMG_8756_hipw5x.jpg" alt="Client Logo 1" class="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300 mx-8">
+                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1764081698/IMG_8757_tytwxp.jpg" alt="Client Logo 2" class="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300 mx-8">
+                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1764081698/IMG_8760_ml5kfg.jpg" alt="Client Logo 3" class="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300 mx-8">
+                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1764081697/IMG_8759_koem62.jpg" alt="Client Logo 4" class="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300 mx-8">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-sre-bg-dark">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center mb-10 text-sre-white">CONTACT US</h2>
             
-            <div class="max-w-6xl mx-auto bg-gray-900 text-sre-white p-6 md:p-12 rounded-xl shadow-2xl border-t-8 border-sre-orange">
+            <div class="max-w-6xl mx-auto bg-sre-black text-sre-white p-6 md:p-12 rounded-xl shadow-2xl border-t-8 border-sre-orange">
                 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 text-center">
                     

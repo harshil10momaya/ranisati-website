@@ -16,13 +16,14 @@
                         'sre-black': '#1a1a1a',
                         'sre-orange': '#D97706',
                         'sre-white': '#f5f5f5',
+                        'sre-card-dark': '#3a3a3a', 
+                        'sre-bg-dark': '#2b2b2b',
                     }
                 }
             }
         }
     </script>
     <style>
-        /* FIX: Prevents fixed navigation bar from overlapping content when using anchor links (#home, #grades, etc.) */
         section {
             padding-top: 5rem;
             scroll-margin-top: 4rem; 
@@ -44,22 +45,19 @@
             background-size: cover;
             background-position: center;
         }
-        /* NEW: Text shadow for better readability against detailed backgrounds */
         .text-outline {
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
         }
-        /* FINAL BACKGROUND IMAGE FIX: Using Cloudinary URL for production */
         #home {
             background-image: url('https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765432/IMG_8563_kj9z9i.webp'); 
             background-size: cover;
             background-position: center;
-            background-color: #1a1a1a; /* Fallback color */
+            background-color: #1a1a1a;
         }
-        /* New: Gradient bottom border for Why Choose Us tiles */
         .gradient-border-bottom {
             position: relative;
-            overflow: hidden; 
-            padding-bottom: 10px; 
+            overflow: hidden;
+            padding-bottom: 10px;
         }
         .gradient-border-bottom::before {
             content: '';
@@ -67,12 +65,28 @@
             bottom: 0;
             left: 0;
             width: 100%;
-            height: 4px; 
-            background: linear-gradient(to right, #D97706, #E08722, #F4A142); 
+            height: 4px;
+            background: linear-gradient(to right, #D97706, #E08722, #F4A142);
+        }
+        .carousel-track {
+            animation: scroll 30s linear infinite;
+            display: flex;
+            gap: 2rem;
+            width: max-content;
+        }
+        @keyframes scroll {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-50%);
+            }
         }
     </style>
 </head>
-<body class="bg-sre-black text-sre-white"> <nav class="fixed top-0 left-0 right-0 z-50 bg-sre-black text-white shadow-lg">
+<body class="bg-sre-bg-dark text-sre-white">
+
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-sre-black text-white shadow-lg">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <a href="index.html" class="flex items-center flex-shrink-0">
@@ -86,7 +100,6 @@
                         <a href="grades.html" class="hover:text-sre-orange px-3 py-2 rounded-md transition duration-200">GRADES</a>
                         <a href="products.html" class="hover:text-sre-orange px-3 py-2 rounded-md transition duration-200">PRODUCT RANGE</a>
                         <a href="sizes.html" class="hover:text-sre-orange px-3 py-2 rounded-md transition duration-200">SIZES</a>
-                        <a href="capabilities.html" class="hover:text-sre-orange px-3 py-2 rounded-md transition duration-200">FACILITIES</a>
                         <a href="index.html#contact" class="hover:text-sre-orange px-3 py-2 rounded-md transition duration-200">CONTACT US</a>
                     </div>
                 </div>
@@ -103,7 +116,6 @@
                 <a href="grades.html" class="mobile-link text-sre-white hover:bg-gray-700 hover:text-sre-orange block px-3 py-2 rounded-md text-base font-medium">GRADES</a>
                 <a href="products.html" class="mobile-link text-sre-white hover:bg-gray-700 hover:text-sre-orange block px-3 py-2 rounded-md text-base font-medium">PRODUCT RANGE</a>
                 <a href="sizes.html" class="mobile-link text-sre-white hover:bg-gray-700 hover:text-sre-orange block px-3 py-2 rounded-md text-base font-medium">SIZES</a>
-                <a href="capabilities.html" class="mobile-link text-sre-white hover:bg-gray-700 hover:text-sre-orange block px-3 py-2 rounded-md text-base font-medium">FACILITIES</a>
                 <a href="index.html#contact" class="mobile-link text-sre-white hover:bg-gray-700 hover:text-sre-orange block px-3 py-2 rounded-md text-base font-medium">CONTACT US</a>
             </div>
         </div>
@@ -126,47 +138,92 @@
         </div>
     </header>
     
-    <section id="why-choose-us" class="py-20 bg-sre-black text-sre-white"> <div class="container mx-auto px-4 max-w-6xl">
-            <h2 class="text-4xl font-bold text-center mb-10 text-sre-white">WHY CHOOSE US</h2> <p class="text-lg text-center max-w-4xl mx-auto mb-12 text-gray-300">Our expertise in iron and steel manufacturing and trading ensures you receive superior products and service on every order.</p>
+    <section id="about" class="py-20 bg-sre-bg-dark">
+        <div class="container mx-auto px-4 max-w-6xl">
+            
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-sre-white inline-block">ABOUT US</h2>
+            </div>
+            
+            <div class="bg-sre-black p-8 md:p-12 rounded-xl shadow-2xl text-lg text-sre-white leading-relaxed max-w-5xl mx-auto">
+                
+                <p class="mb-6 text-center text-gray-300">
+                    Sri Ranisati Enterprises is an established specialist in Iron and Steel trading and manufacturing in Coimbatore, bringing <span class="text-sre-orange">over 15+ years</span> of valuable market experience. From our start in a small warehouse in 2010, we've transformed into a robust, integrated trading and manufacturing business committed to providing full-service, quality solutions.
+                </p>
+
+                <p class="mb-8 text-2xl font-medium text-center border-y border-gray-700/50 py-4">
+                    We go beyond simple material supply; we don't just deliver iron and steel—we <span class="text-sre-orange">precision cut, process, and finish it to your exact needs.</span>
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-8 pt-6">
+                    
+                    <div class="space-y-2 text-center md:text-left">
+                        <h3 class="text-xl font-bold text-sre-orange uppercase">Infrastructure & Capacity</h3>
+                        <p class="text-gray-300">
+                            Our operations are supported by a substantial 40,000 sq ft warehouse fully equipped with cranes, alongside advanced CNC cutting facilities capable of handling diameters from 20 dia up to 350 dia.
+                        </p>
+                    </div>
+
+                    <div class="space-y-2 text-center md:text-left">
+                        <h3 class="text-xl font-bold text-sre-orange uppercase">Sourcing & Delivery</h3>
+                        <p class="text-gray-300">
+                            We partner with all leading Iron and Steel manufacturers in and around Tamil Nadu to ensure seamless sourcing, and we guarantee reliable transportation and doorstep delivery of all products.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-choose-us" class="py-20 bg-sre-black text-sre-white">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <h2 class="text-4xl font-bold text-center mb-10 text-sre-white">WHY CHOOSE US</h2>
+            <p class="text-lg text-center max-w-4xl mx-auto mb-12 text-gray-300">Our expertise in iron and steel manufacturing and trading ensures you receive superior products and service on every order.</p>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
                 
-                <div class="p-6 bg-gray-800 text-sre-white rounded-xl shadow-lg gradient-border-bottom"> <i class="fa-solid fa-medal text-4xl text-sre-orange mb-4"></i>
+                <div class="p-6 bg-sre-card-dark text-sre-white rounded-xl shadow-lg gradient-border-bottom">
+                    <i class="fa-solid fa-medal text-4xl text-sre-orange mb-4"></i>
                     <h3 class="text-xl font-bold mb-3">BEST QUALITY</h3>
                     <p class="leading-relaxed text-sre-white">
                         Our steel stands for more than just strength — it reflects precision, consistency, and excellence in every batch we deliver.
                     </p>
                 </div>
                 
-                <div class="p-6 bg-gray-800 text-sre-white rounded-xl shadow-lg gradient-border-bottom"> <i class="fa-solid fa-clock text-4xl text-sre-orange mb-4"></i>
+                <div class="p-6 bg-sre-card-dark text-sre-white rounded-xl shadow-lg gradient-border-bottom">
+                    <i class="fa-solid fa-clock text-4xl text-sre-orange mb-4"></i>
                     <h3 class="text-xl font-bold mb-3">TIME TARGETS</h3>
                     <p class="leading-relaxed text-sre-white">
                         Driven by efficiency and teamwork, we ensure every order is delivered right on schedule. For added convenience, we also provide our own delivery vehicle service within Coimbatore.
                     </p>
                 </div>
 
-                <div class="p-6 bg-gray-800 text-sre-white rounded-xl shadow-lg gradient-border-bottom"> <i class="fa-solid fa-thumbs-up text-4xl text-sre-orange mb-4"></i>
+                <div class="p-6 bg-sre-card-dark text-sre-white rounded-xl shadow-lg gradient-border-bottom">
+                    <i class="fa-solid fa-thumbs-up text-4xl text-sre-orange mb-4"></i>
                     <h3 class="text-xl font-bold mb-3">HAPPY CUSTOMERS</h3>
                     <p class="leading-relaxed text-sre-white">
                         We take pride in having over 999+ happy clients who trust our commitment to quality and timely service.
                     </p>
                 </div>
 
-                <div class="p-6 bg-gray-800 text-sre-white rounded-xl shadow-lg gradient-border-bottom"> <i class="fa-solid fa-handshake text-4xl text-sre-orange mb-4"></i>
+                <div class="p-6 bg-sre-card-dark text-sre-white rounded-xl shadow-lg gradient-border-bottom">
+                    <i class="fa-solid fa-handshake text-4xl text-sre-orange mb-4"></i>
                     <h3 class="text-xl font-bold mb-3">STRATEGY</h3>
                     <p class="leading-relaxed text-sre-white">
                         Our approach is simple — consistent quality, dependable delivery, and fair pricing you can count on.
                     </p>
                 </div>
                 
-                <div class="p-6 bg-gray-800 text-sre-white rounded-xl shadow-lg gradient-border-bottom"> <i class="fa-solid fa-truck text-4xl text-sre-orange mb-4"></i>
+                <div class="p-6 bg-sre-card-dark text-sre-white rounded-xl shadow-lg gradient-border-bottom">
+                    <i class="fa-solid fa-truck text-4xl text-sre-orange mb-4"></i>
                     <h3 class="text-xl font-bold mb-3">RELIABLE SUPPLIERS</h3>
                     <p class="leading-relaxed text-sre-white">
                         We supply premium JSW and VSP rounds and source top-grade materials from China and Korea to meet diverse needs.
                     </p>
                 </div>
                 
-                <div class="p-6 bg-gray-800 text-sre-white rounded-xl shadow-lg gradient-border-bottom"> <i class="fa-solid fa-award text-4xl text-sre-orange mb-4"></i>
+                <div class="p-6 bg-sre-card-dark text-sre-white rounded-xl shadow-lg gradient-border-bottom">
+                    <i class="fa-solid fa-award text-4xl text-sre-orange mb-4"></i>
                     <h3 class="text-xl font-bold mb-3">INTEGRITY</h3>
                     <p class="leading-relaxed text-sre-white">
                         With years of industry experience, we’ve earned our reputation through honesty, expertise, and reliability.
@@ -177,35 +234,92 @@
         </div>
     </section>
 
-    <section id="about" class="py-20 bg-gray-900"> <div class="container mx-auto px-4 max-w-6xl">
+    <section id="capabilities" class="py-20 bg-sre-bg-dark text-sre-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-4">OUR PRECISION CAPABILITIES</h2>
             
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-sre-white inline-block">ABOUT US</h2> </div>
-            
-            <div class="bg-sre-black p-8 md:p-12 rounded-xl shadow-2xl text-lg text-sre-white leading-relaxed max-w-5xl mx-auto">
+            <p class="text-xl text-center max-w-3xl mx-auto mb-12 text-gray-300">
+                Our operations are supported by advanced CNC cutting facilities. We have a range of specialized machinery equipped to cut materials in various sizes, ensuring precision and reliability.
+            </p>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
                 
-                <p class="mb-6 text-center">
-                    Sri Ranisati Enterprises is an established specialist in <span class="font-bold text-sre-white">Iron and Steel trading and manufacturing</span> in Coimbatore, bringing <span class="font-bold text-sre-orange">over 15+ years</span> of valuable market experience. From our start in a small warehouse in 2010, we've transformed into a robust, integrated trading and manufacturing business committed to providing full-service, quality solutions.
-                </p>
+                <div class="relative bg-sre-card-dark text-sre-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300 col-span-1">
+                    <div class="h-32 bg-gray-700 flex items-center justify-center bg-cover-center" 
+                         style="background-image: url('https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765429/Semi_auto_-_upto_360_dia_vw5gjd.webp');">
+                    </div>
+                    <div class="p-4 text-center h-24 flex flex-col justify-center">
+                        <h3 class="text-xl font-bold mb-1 uppercase">SEMI AUTOMATIC CUTTING</h3>
+                        <p class="text-sre-orange text-lg">Capacity: <span class="font-bold">Upto 360 dia</span></p>
+                    </div>
+                </div>
+                
+                <div class="relative bg-sre-card-dark text-sre-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300 col-span-1">
+                    <div class="h-32 bg-gray-700 flex items-center justify-center bg-cover-center" style="background-image: url('https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765432/Cutting_Saw_upto_210_dia_icrdvl.webp');"></div>
+                    <div class="p-4 text-center h-24 flex flex-col justify-center">
+                        <h3 class="text-xl font-bold mb-1 uppercase">CIRCULAR SAW</h3>
+                        <p class="text-sre-orange text-lg">Capacity: <span class="font-bold">Upto 210 dia</span></p>
+                    </div>
+                </div>
 
-                <p class="mb-8 text-xl font-medium text-center">
-                    We go beyond simple material supply; we don't just deliver iron and steel—we <span class="font-extrabold text-sre-orange">precision cut, process, and finish it to your exact needs.</span>
-                </p>
+                <div class="relative bg-sre-card-dark text-sre-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300 col-span-1">
+                    <div class="h-32 bg-gray-700 flex items-center justify-center bg-cover-center" style="background-image: url('https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765432/Circular_saw._wrtk1h.webp');"></div>
+                    <div class="p-4 text-center h-24 flex flex-col justify-center">
+                        <h3 class="text-xl font-bold mb-1 uppercase">CIRCULAR SAW</h3>
+                        <p class="text-sre-orange text-lg">Capacity: <span class="font-bold">Upto 130 dia</span></p>
+                    </div>
+                </div>
 
-                <div class="space-y-4 border-t pt-6 border-gray-700 text-center">
-                    <p>
-                        Our operations are supported by a substantial <span class="font-bold text-sre-orange">40,000 sq ft warehouse</span> fully equipped with cranes, alongside advanced CNC cutting facilities capable of handling diameters from 20 dia up to 350 dia.
-                    </p>
-                    <p>
-                        We partner with all leading Iron and Steel manufacturers in and around Tamil Nadu to ensure seamless sourcing, and we guarantee <span class="font-bold text-sre-orange">reliable transportation and doorstep delivery</span> of all products.
-                    </p>
+                <div class="relative bg-sre-card-dark text-sre-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300 col-span-1">
+                    <div class="h-32 bg-gray-700 flex items-center justify-center bg-cover-center" style="background-image: url('https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765431/Circular_saw_-_upto_85_dia_yxpnrf.webp');"></div>
+                    <div class="p-4 text-center h-24 flex flex-col justify-center">
+                        <h3 class="text-xl font-bold mb-1 uppercase">CIRCULAR SAW</h3>
+                        <p class="text-sre-orange text-lg">Capacity: <span class="font-bold">Upto 85 dia</span></p>
+                    </div>
+                </div>
+
+                <div class="relative bg-sre-card-dark text-sre-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300 col-span-1">
+                    <div class="h-32 bg-gray-700 flex items-center justify-center bg-cover-center" style="background-image: url('https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765432/Circular_saw_upto_80_dia_uygsvu.webp');"></div>
+                    <div class="p-4 text-center h-24 flex flex-col justify-center">
+                        <h3 class="text-xl font-bold mb-1 uppercase">CIRCULAR SAW</h3>
+                        <p class="text-sre-orange text-lg">Capacity: <span class="font-bold">Upto 80 dia</span></p>
+                    </div>
+                </div>
+
+            </div>
+            
+            <p class="text-center mt-12 text-sre-white text-lg font-semibold">
+                Supported by a substantial <span class="font-bold">40,000 sq ft warehouse</span> fully equipped with cranes, alongside advanced CNC cutting facilities.
+            </p>
+
+        </div>
+    </section>
+
+    <section id="clients" class="py-12 bg-sre-black">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8 text-sre-white">OUR CLIENTS</h2>
+            <div class="overflow-hidden relative">
+                <div class="carousel-track">
+                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1764081698/IMG_8756_hipw5x.jpg" alt="Client Logo 1" class="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300 mx-8">
+                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1764081698/IMG_8757_tytwxp.jpg" alt="Client Logo 2" class="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300 mx-8">
+                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1764081698/IMG_8760_ml5kfg.jpg" alt="Client Logo 3" class="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300 mx-8">
+                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1764081697/IMG_8759_koem62.jpg" alt="Client Logo 4" class="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300 mx-8">
+                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1764081698/IMG_8756_hipw5x.jpg" alt="Client Logo 1" class="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300 mx-8">
+                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1764081698/IMG_8757_tytwxp.jpg" alt="Client Logo 2" class="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300 mx-8">
+                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1764081698/IMG_8760_ml5kfg.jpg" alt="Client Logo 3" class="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300 mx-8">
+                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1764081697/IMG_8759_koem62.jpg" alt="Client Logo 4" class="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300 mx-8">
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-20 bg-sre-black"> <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-10 text-sre-white">CONTACT US</h2> <div class="max-w-6xl mx-auto bg-gray-900 text-sre-white p-6 md:p-12 rounded-xl shadow-2xl border-t-8 border-sre-orange"> <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 text-center">
+    <section id="contact" class="py-20 bg-sre-bg-dark">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-10 text-sre-white">CONTACT US</h2>
+            
+            <div class="max-w-6xl mx-auto bg-sre-black text-sre-white p-6 md:p-12 rounded-xl shadow-2xl border-t-8 border-sre-orange">
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 text-center">
                     
                     <div class="space-y-3 p-4 border-b md:border-b-0 md:border-r border-gray-700/50 flex flex-col items-center justify-center">
                         <h3 class="text-xl font-bold uppercase text-sre-orange">Address</h3>

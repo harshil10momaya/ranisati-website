@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVAILABILITY & SIZING - SRI RANISATI ENTERPRISES</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6TaYFAW1iQJ/8v+NDN92+nPpS3zIclRFL5ryCoP0MVvm+w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'sre-black': '#1a1a1a',
+                        'sre-orange': '#D97706',
+                        'sre-white': '#f5f5f5',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        section {
+            padding-top: 5rem;
+            scroll-margin-top: 4rem; 
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D97706;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1a1a1a;
+        }
+    </style>
+</head>
+<body class="bg-sre-black text-sre-white"> 
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-sre-black text-white shadow-lg">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="index.html" class="flex items-center flex-shrink-0">
+                    <div class="rounded-full bg-sre-white p-1 shadow-md">
+                        <img src="images/SRE_logo.svg" alt="SRI RANISATI Logo" class="h-10 w-auto">
+                    </div>
+                </a>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4 font-semibold">
+                        <a href="index.html" class="hover:text-sre-orange px-3 py-2 rounded-md transition duration-200">HOME</a>
+                        <a href="grades.html" class="hover:text-sre-orange px-3 py-2 rounded-md transition duration-200">GRADES</a>
+                        <a href="products.html" class="hover:text-sre-orange px-3 py-2 rounded-md transition duration-200">PRODUCT RANGE</a>
+                        <a href="sizes.html" class="hover:text-sre-orange px-3 py-2 rounded-md transition duration-200">SIZES</a>
+                        <a href="capabilities.html" class="hover:text-sre-orange px-3 py-2 rounded-md transition duration-200">FACILITIES</a>
+                        <a href="sizes.html#contact" class="hover:text-sre-orange px-3 py-2 rounded-md transition duration-200">CONTACT US</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-button" class="text-white hover:text-sre-orange focus:outline-none" aria-label="Toggle navigation menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col">
+                <a href="index.html" class="mobile-link text-sre-white hover:bg-gray-700 hover:text-sre-orange block px-3 py-2 rounded-md text-base font-medium">HOME</a>
+                <a href="grades.html" class="mobile-link text-sre-white hover:bg-gray-700 hover:text-sre-orange block px-3 py-2 rounded-md text-base font-medium">GRADES</a>
+                <a href="products.html" class="mobile-link text-sre-white hover:bg-gray-700 hover:text-sre-orange block px-3 py-2 rounded-md text-base font-medium">PRODUCT RANGE</a>
+                <a href="sizes.html" class="mobile-link text-sre-white hover:bg-gray-700 hover:text-sre-orange block px-3 py-2 rounded-md text-base font-medium">SIZES</a>
+                <a href="capabilities.html" class="mobile-link text-sre-white hover:bg-gray-700 hover:text-sre-orange block px-3 py-2 rounded-md text-base font-medium">FACILITIES</a>
+                <a href="sizes.html#contact" class="mobile-link text-sre-white hover:bg-gray-700 hover:text-sre-orange block px-3 py-2 rounded-md text-base font-medium">CONTACT US</a>
+            </div>
+        </div>
+    </nav>
+    
+    <section id="sizes" class="py-20 bg-sre-black pt-24">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-10 text-sre-white">AVAILABILITY & SIZING</h2>
+            <p class="text-lg text-center max-w-4xl mx-auto mb-8 text-gray-300">Our comprehensive stock ensures you get the exact dimensions needed, from small diameters to large industrial sizes.</p>
+
+            <div class="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-4">
+                
+                <div class="bg-gray-800 text-sre-white p-4 rounded-lg shadow-lg border-b-4 border-sre-orange h-32 flex flex-col justify-center">
+                    <h3 class="text-2xl font-bold mb-1">ROUNDS</h3>
+                    <p class="text-lg font-semibold">6mm UPTO 350mm dia</p>
+                </div>
+
+                <div class="bg-gray-800 text-sre-white p-4 rounded-lg shadow-lg border-b-4 border-sre-orange h-32 flex flex-col justify-center">
+                    <h3 class="text-2xl font-bold mb-1">SQUARES</h3>
+                    <p class="text-lg font-semibold">6mm UPTO 125mm</p>
+                </div>
+
+                <div class="bg-gray-800 text-sre-white p-4 rounded-lg shadow-lg border-b-4 border-sre-orange h-32 flex flex-col justify-center">
+                    <h3 class="text-2xl font-bold mb-1">FLATS</h3>
+                    <p class="text-lg font-semibold">19mm x 5mm UPTO 200mm x 32mm</p>
+                </div>
+
+                <div class="bg-gray-800 text-sre-white p-4 rounded-lg shadow-lg border-b-4 border-sre-orange h-32 flex flex-col justify-center">
+                    <h3 class="text-2xl font-bold mb-1">HEX</h3>
+                    <p class="text-lg font-semibold">6mm UPTO 75mm</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-sre-black">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-10 text-sre-white">CONTACT US</h2>
+            
+            <div class="max-w-6xl mx-auto bg-gray-900 text-sre-white p-6 md:p-12 rounded-xl shadow-2xl border-t-8 border-sre-orange">
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 text-center">
+                    
+                    <div class="space-y-3 p-4 border-b md:border-b-0 md:border-r border-gray-700/50 flex flex-col items-center justify-center">
+                        <h3 class="text-xl font-bold uppercase text-sre-orange">Address</h3>
+                        <p class="text-lg font-medium leading-relaxed">
+                            7/2, DVP Industrial Estate, Athipalayam Road, Chinnavedampatti, Ganapathy, Coimbatore - 641006
+                        </p>
+                    </div>
+
+                    <div class="space-y-3 p-4 border-b md:border-b-0 md:border-r border-gray-700/50 flex flex-col items-center justify-center">
+                        <h3 class="text-xl font-bold uppercase text-sre-orange">Phone Numbers</h3>
+                        <div class="text-lg font-medium space-y-1">
+                            <p class="font-bold">Amit Bansal:</p>
+                            <a href="tel:9842214646" class="block text-sre-orange hover:text-sre-white transition duration-200 text-xl font-semibold">98422-14646</a>
+                            <p class="font-bold pt-2">Saurav Lohia:</p>
+                            <a href="tel:8489991937" class="block text-sre-orange hover:text-sre-white transition duration-200 text-xl font-semibold">84899-91937</a>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3 p-4 flex flex-col items-center justify-center">
+                        <h3 class="text-xl font-bold uppercase text-sre-orange">Email</h3>
+                        <div class="text-lg font-medium space-y-1">
+                            <a href="mailto:amit@srirani.com" class="block text-sre-orange hover:text-sre-white transition duration-200 text-xl font-semibold">
+                                amit@srirani.com
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-sre-black text-white py-10 text-center">
+        <p>&copy; <span id="current-year"></span> SRI RANISATI ENTERPRISES. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuButton = document.getElementById('menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+            
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>

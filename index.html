@@ -47,6 +47,13 @@
         ::-webkit-scrollbar-track {
             background: #1a1a1a;
         }
+        /* FIX 1: Logo visibility */
+        .sre-logo-bg {
+            background-color: white;
+            border-radius: 50%;
+            padding: 4px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
         .bg-cover-center {
             background-size: cover;
             background-position: center;
@@ -96,7 +103,7 @@
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <a href="index.html" class="flex items-center flex-shrink-0">
-                    <div class="rounded-full bg-sre-white p-1 shadow-md">
+                    <div class="sre-logo-bg p-1 shadow-md">
                         <img src="images/SRE_logo.svg" alt="SRI RANISATI Logo" class="h-10 w-auto">
                     </div>
                 </a>
@@ -153,7 +160,7 @@
             
             <div class="bg-sre-black p-8 md:p-12 rounded-xl shadow-2xl text-lg text-sre-white leading-relaxed max-w-5xl mx-auto">
                 
-                <p class="mb-6 text-center text-gray-300">
+                <p class="mb-6 text-center text-gray-300 text-justify">
                     Sri Ranisati Enterprises is an established specialist in Iron and Steel trading and manufacturing in Coimbatore, bringing <span class="text-sre-orange">over 15+ years</span> of valuable market experience. From our start in a small warehouse in 2010, we've transformed into a robust, integrated trading and manufacturing business committed to providing full-service, quality solutions.
                 </p>
 
@@ -165,14 +172,14 @@
                     
                     <div class="space-y-2 text-center md:text-left">
                         <h3 class="text-xl font-bold text-sre-orange uppercase">Infrastructure & Capacity</h3>
-                        <p class="text-gray-300">
+                        <p class="text-gray-300 text-justify">
                             Our operations are supported by a substantial 40,000 sq ft warehouse fully equipped with cranes, alongside advanced CNC cutting facilities capable of handling diameters from 20 dia up to 350 dia.
                         </p>
                     </div>
 
                     <div class="space-y-2 text-center md:text-left">
                         <h3 class="text-xl font-bold text-sre-orange uppercase">Sourcing & Delivery</h3>
-                        <p class="text-gray-300">
+                        <p class="text-gray-300 text-justify">
                             We partner with all leading Iron and Steel manufacturers in and around Tamil Nadu to ensure seamless sourcing, and we guarantee reliable transportation and doorstep delivery of all products.
                         </p>
                     </div>
@@ -248,46 +255,46 @@
                 Our operations are supported by advanced CNC cutting facilities. We have a range of specialized machinery equipped to cut materials in various sizes, ensuring precision and reliability.
             </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
                 
                 <div class="relative bg-sre-card-dark text-sre-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300 col-span-1">
-                    <div class="h-32 bg-gray-700 flex items-center justify-center bg-cover-center" 
+                    <div class="w-full h-48 bg-gray-700 flex items-center justify-center bg-cover-center" 
                          style="background-image: url('https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765429/Semi_auto_-_upto_360_dia_vw5gjd.webp');">
                     </div>
                     <div class="p-4 text-center h-24 flex flex-col justify-center">
-                        <h3 class="text-xl font-bold mb-1 uppercase">SEMI AUTOMATIC CUTTING</h3>
+                        <h3 class="text-xl font-bold mb-1 uppercase">SEMI AUTOMATIC CUTTING MACHINE</h3>
                         <p class="text-sre-orange text-lg">Capacity: <span class="font-bold">Upto 360 dia</span></p>
                     </div>
                 </div>
                 
                 <div class="relative bg-sre-card-dark text-sre-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300 col-span-1">
-                    <div class="h-32 bg-gray-700 flex items-center justify-center bg-cover-center" style="background-image: url('https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765432/Cutting_Saw_upto_210_dia_icrdvl.webp');"></div>
+                    <div class="w-full h-48 bg-gray-700 flex items-center justify-center bg-cover-center" style="background-image: url('https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765432/Cutting_Saw_upto_210_dia_icrdvl.webp');"></div>
                     <div class="p-4 text-center h-24 flex flex-col justify-center">
-                        <h3 class="text-xl font-bold mb-1 uppercase">CIRCULAR SAW</h3>
+                        <h3 class="text-xl font-bold mb-1 uppercase">CIRCULAR SAW CUTTING MACHINE</h3>
                         <p class="text-sre-orange text-lg">Capacity: <span class="font-bold">Upto 210 dia</span></p>
                     </div>
                 </div>
 
                 <div class="relative bg-sre-card-dark text-sre-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300 col-span-1">
-                    <div class="h-32 bg-gray-700 flex items-center justify-center bg-cover-center" style="background-image: url('https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765432/Circular_saw._wrtk1h.webp');"></div>
+                    <div class="w-full h-48 bg-gray-700 flex items-center justify-center bg-cover-center" style="background-image: url('https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765432/Circular_saw._wrtk1h.webp');"></div>
                     <div class="p-4 text-center h-24 flex flex-col justify-center">
-                        <h3 class="text-xl font-bold mb-1 uppercase">CIRCULAR SAW</h3>
+                        <h3 class="text-xl font-bold mb-1 uppercase">CIRCULAR SAW CUTTING MACHINE</h3>
                         <p class="text-sre-orange text-lg">Capacity: <span class="font-bold">Upto 130 dia</span></p>
                     </div>
                 </div>
 
                 <div class="relative bg-sre-card-dark text-sre-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300 col-span-1">
-                    <div class="h-32 bg-gray-700 flex items-center justify-center bg-cover-center" style="background-image: url('https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765431/Circular_saw_-_upto_85_dia_yxpnrf.webp');"></div>
+                    <div class="w-full h-48 bg-gray-700 flex items-center justify-center bg-cover-center" style="background-image: url('https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765431/Circular_saw_-_upto_85_dia_yxpnrf.webp');"></div>
                     <div class="p-4 text-center h-24 flex flex-col justify-center">
-                        <h3 class="text-xl font-bold mb-1 uppercase">CIRCULAR SAW</h3>
+                        <h3 class="text-xl font-bold mb-1 uppercase">CIRCULAR SAW CUTTING MACHINE</h3>
                         <p class="text-sre-orange text-lg">Capacity: <span class="font-bold">Upto 85 dia</span></p>
                     </div>
                 </div>
 
                 <div class="relative bg-sre-card-dark text-sre-white rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition duration-300 col-span-1">
-                    <div class="h-32 bg-gray-700 flex items-center justify-center bg-cover-center" style="background-image: url('https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765432/Circular_saw_upto_80_dia_uygsvu.webp');"></div>
+                    <div class="w-full h-48 bg-gray-700 flex items-center justify-center bg-cover-center" style="background-image: url('https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765432/Circular_saw_upto_80_dia_uygsvu.webp');"></div>
                     <div class="p-4 text-center h-24 flex flex-col justify-center">
-                        <h3 class="text-xl font-bold mb-1 uppercase">CIRCULAR SAW</h3>
+                        <h3 class="text-xl font-bold mb-1 uppercase">CIRCULAR SAW CUTTING MACHINE</h3>
                         <p class="text-sre-orange text-lg">Capacity: <span class="font-bold">Upto 80 dia</span></p>
                     </div>
                 </div>

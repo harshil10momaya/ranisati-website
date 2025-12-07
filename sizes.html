@@ -10,7 +10,7 @@
     <meta name="author" content="SRI RANISATI ENTERPRISES">
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6TaYFAW1iQJ/8v+NDN92+nPpS3zIclRFL5ryCoP0MVvm+w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 
     <link rel="icon" type="image/png" href="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1764085580/favicon_pcokoh.png">
 
@@ -22,207 +22,186 @@
                         'sre-black': '#1a1a1a',
                         'sre-orange': '#D97706',
                         'sre-white': '#f5f5f5',
-                        'sre-card-dark': '#3a3a3a', 
+                        'sre-card-dark': '#3a3a3a',
                         'sre-bg-dark': '#2b2b2b',
                     }
                 }
             }
         }
     </script>
+
     <style>
-        section {
-            padding-top: 5rem;
-            scroll-margin-top: 4rem; 
-        }
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #D97706;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #1a1a1a;
-        }
+        section { padding-top: 5rem; scroll-margin-top: 4rem; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-thumb { background: #D97706; border-radius: 4px; }
+        ::-webkit-scrollbar-track { background: #1a1a1a; }
+
         .carousel-track {
             animation: scroll 30s linear infinite;
-            display: flex;
-            gap: 2rem;
-            width: max-content;
+            display: flex; gap: 2rem; width: max-content;
         }
-        @keyframes scroll {
-            from {
-                transform: translateX(0);
-            }
-            to {
-                transform: translateX(-50%);
-            }
-        }
+        @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
         .logo-circle-wrapper {
-            background-color: white;
-            border-radius: 50%;
-            padding: 4px;
+            background-color: white; border-radius: 50%; padding: 4px;
+            width: 44px; height: 44px;
+            display: flex; align-items: center; justify-content: center;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-            width: 44px; 
-            height: 44px;
-            overflow: hidden; 
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
-        .logo-circle-wrapper img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain; 
-            object-position: center;
-        }
+        .logo-circle-wrapper img { width: 100%; height: 100%; object-fit: contain; }
     </style>
 </head>
-<body class="bg-sre-bg-dark text-sre-white"> 
+
+<body class="bg-sre-bg-dark text-sre-white">
+
+    <!-- NAVBAR -->
     <nav class="fixed top-0 left-0 right-0 z-50 bg-sre-black text-white shadow-lg">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
-                <a href="index.html" class="flex items-center flex-shrink-0">
+                <a href="index.html" class="flex items-center">
                     <div class="logo-circle-wrapper">
-                        <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1764085580/favicon_pcokoh.png" alt="SRI RANISATI Logo">
+                        <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1764085580/favicon_pcokoh.png" alt="Logo">
                     </div>
                 </a>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4 font-semibold">
-                        <a href="index.html" class="hover:text-sre-orange px-3 py-2 rounded-md transition duration-200">HOME</a>
-                        <a href="grades.html" class="hover:text-sre-orange px-3 py-2 rounded-md transition duration-200">GRADES</a>
-                        <a href="products.html" class="hover:text-sre-orange px-3 py-2 rounded-md transition duration-200">PRODUCT RANGE</a>
-                        <a href="sizes.html" class="hover:text-sre-orange px-3 py-2 rounded-md transition duration-200">SIZES</a>
-                        <a href="index.html#contact" class="hover:text-sre-orange px-3 py-2 rounded-md transition duration-200">CONTACT US</a>
+                        <a href="index.html" class="hover:text-sre-orange px-3 py-2">HOME</a>
+                        <a href="grades.html" class="hover:text-sre-orange px-3 py-2">GRADES</a>
+                        <a href="products.html" class="hover:text-sre-orange px-3 py-2">PRODUCT RANGE</a>
+                        <a href="sizes.html" class="hover:text-sre-orange px-3 py-2">SIZES</a>
+                        <a href="index.html#contact" class="hover:text-sre-orange px-3 py-2">CONTACT US</a>
                     </div>
                 </div>
+
                 <div class="md:hidden">
-                    <button id="menu-button" class="text-white hover:text-sre-orange focus:outline-none" aria-label="Toggle navigation menu">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    <button id="menu-button" class="text-white hover:text-sre-orange">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
                     </button>
                 </div>
             </div>
         </div>
+
+        <!-- MOBILE MENU -->
         <div class="md:hidden hidden" id="mobile-menu">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col">
-                <a href="index.html" class="mobile-link text-sre-white hover:bg-gray-700 hover:text-sre-orange block px-3 py-2 rounded-md text-base font-medium">HOME</a>
-                <a href="grades.html" class="mobile-link text-sre-white hover:bg-gray-700 hover:text-sre-orange block px-3 py-2 rounded-md text-base font-medium">GRADES</a>
-                <a href="products.html" class="mobile-link text-sre-white hover:bg-gray-700 hover:text-sre-orange block px-3 py-2 rounded-md text-base font-medium">PRODUCT RANGE</a>
-                <a href="sizes.html" class="mobile-link text-sre-white hover:bg-gray-700 hover:text-sre-orange block px-3 py-2 rounded-md text-base font-medium">SIZES</a>
-                <a href="index.html#contact" class="mobile-link text-sre-white hover:bg-gray-700 hover:text-sre-orange block px-3 py-2 rounded-md text-base font-medium">CONTACT US</a>
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="mobile-link px-3 py-2">HOME</a>
+                <a href="grades.html" class="mobile-link px-3 py-2">GRADES</a>
+                <a href="products.html" class="mobile-link px-3 py-2">PRODUCT RANGE</a>
+                <a href="sizes.html" class="mobile-link px-3 py-2">SIZES</a>
+                <a href="index.html#contact" class="mobile-link px-3 py-2">CONTACT US</a>
             </div>
         </div>
     </nav>
-    
+
+    <!-- SIZES SECTION -->
     <section id="sizes" class="py-20 bg-sre-bg-dark pt-24">
         <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-10 text-sre-white">AVAILABILITY & SIZING</h2>
-            <p class="text-lg text-center max-w-4xl mx-auto mb-8 text-gray-300">Our comprehensive stock ensures you get the exact dimensions needed, from small diameters to large industrial sizes.</p>
+            <h2 class="text-4xl font-bold text-center mb-10">AVAILABILITY & SIZING</h2>
+            <p class="text-lg text-center max-w-4xl mx-auto mb-8 text-gray-300">
+                Our comprehensive stock ensures you get the exact dimensions needed, from small diameters to large industrial sizes.
+            </p>
 
             <div class="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-4">
-                
-                <div class="p-4 bg-sre-card-dark text-sre-white rounded-lg shadow-lg border-b-4 border-sre-orange h-32 flex flex-col justify-center text-center">
-                    <h3 class="text-2xl font-bold mb-1">ROUNDS</h3>
-                    <p class="text-lg font-semibold">6mm UPTO 350mm dia</p>
+
+                <!-- REDUCED TEXT SIZE -->
+                <div class="p-4 bg-sre-card-dark rounded-lg shadow-lg border-b-4 border-sre-orange h-32 flex flex-col justify-center text-center">
+                    <h3 class="text-xl font-bold mb-1">ROUNDS</h3>
+                    <p class="text-base font-semibold">6mm UPTO 350mm dia</p>
                 </div>
 
-                <div class="p-4 bg-sre-card-dark text-sre-white rounded-lg shadow-lg border-b-4 border-sre-orange h-32 flex flex-col justify-center text-center">
-                    <h3 class="text-2xl font-bold mb-1">SQUARES</h3>
-                    <p class="text-lg font-semibold">6mm UPTO 125mm</p>
+                <div class="p-4 bg-sre-card-dark rounded-lg shadow-lg border-b-4 border-sre-orange h-32 flex flex-col justify-center text-center">
+                    <h3 class="text-xl font-bold mb-1">SQUARES</h3>
+                    <p class="text-base font-semibold">6mm UPTO 125mm</p>
                 </div>
 
-                <div class="p-4 bg-sre-card-dark text-sre-white rounded-lg shadow-lg border-b-4 border-sre-orange h-32 flex flex-col justify-center text-center">
-                    <h3 class="text-2xl font-bold mb-1">FLATS</h3>
-                    <p class="text-lg font-semibold">19mm x 5mm UPTO 200mm x 32mm</p>
+                <div class="p-4 bg-sre-card-dark rounded-lg shadow-lg border-b-4 border-sre-orange h-32 flex flex-col justify-center text-center">
+                    <h3 class="text-xl font-bold mb-1">FLATS</h3>
+                    <p class="text-base font-semibold">19mm x 5mm UPTO 200mm x 32mm</p>
                 </div>
 
-                <div class="p-4 bg-sre-card-dark text-sre-white rounded-lg shadow-lg border-b-4 border-sre-orange h-32 flex flex-col justify-center text-center">
-                    <h3 class="text-2xl font-bold mb-1">HEX</h3>
-                    <p class="text-lg font-semibold">6mm UPTO 75mm</p>
+                <div class="p-4 bg-sre-card-dark rounded-lg shadow-lg border-b-4 border-sre-orange h-32 flex flex-col justify-center text-center">
+                    <h3 class="text-xl font-bold mb-1">HEX</h3>
+                    <p class="text-base font-semibold">6mm UPTO 75mm</p>
                 </div>
+
             </div>
         </div>
     </section>
 
+    <!-- CLIENTS -->
     <section id="clients" class="py-12 bg-sre-black">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-8 text-sre-white">OUR CLIENTS</h2>
+            <h2 class="text-3xl font-bold text-center mb-8">OUR CLIENTS</h2>
+
             <div class="overflow-hidden relative">
                 <div class="carousel-track">
-                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1764081698/IMG_8756_hipw5x.jpg" alt="Client Logo 1" class="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300 mx-8">
-                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1764081698/IMG_8757_tytwxp.jpg" alt="Client Logo 2" class="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300 mx-8">
-                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1764081698/IMG_8760_ml5kfg.jpg" alt="Client Logo 3" class="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300 mx-8">
-                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1764081697/IMG_8759_koem62.jpg" alt="Client Logo 4" class="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300 mx-8">
-                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1764081698/IMG_8756_hipw5x.jpg" alt="Client Logo 1" class="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300 mx-8">
-                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1764081698/IMG_8757_tytwxp.jpg" alt="Client Logo 2" class="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300 mx-8">
-                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1764081698/IMG_8760_ml5kfg.jpg" alt="Client Logo 3" class="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300 mx-8">
-                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1764081697/IMG_8759_koem62.jpg" alt="Client Logo 4" class="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300 mx-8">
+                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1764081698/IMG_8756_hipw5x.jpg" class="h-16 opacity-70 mx-8">
+                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1764081698/IMG_8757_tytwxp.jpg" class="h-16 opacity-70 mx-8">
+                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1764081698/IMG_8760_ml5kfg.jpg" class="h-16 opacity-70 mx-8">
+                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1764081697/IMG_8759_koem62.jpg" class="h-16 opacity-70 mx-8">
+
+                    <!-- DUPLICATES FOR LOOPING -->
+                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1764081698/IMG_8756_hipw5x.jpg" class="h-16 opacity-70 mx-8">
+                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1764081698/IMG_8757_tytwxp.jpg" class="h-16 opacity-70 mx-8">
+                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1764081698/IMG_8760_ml5kfg.jpg" class="h-16 opacity-70 mx-8">
+                    <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1764081697/IMG_8759_koem62.jpg" class="h-16 opacity-70 mx-8">
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact" class="py-20 bg-sre-bg-dark">
         <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-10 text-sre-white">CONTACT US</h2>
-            
-            <div class="max-w-6xl mx-auto bg-sre-black text-sre-white p-6 md:p-12 rounded-xl shadow-2xl border-t-8 border-sre-orange">
-                
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 text-center">
-                    
-                    <div class="space-y-3 p-4 border-b md:border-b-0 md:border-r border-gray-700/50 flex flex-col items-center justify-center">
-                        <h3 class="text-xl font-bold uppercase text-sre-orange">Address</h3>
-                        <p class="text-lg font-medium leading-relaxed">
+            <h2 class="text-4xl font-bold text-center mb-10">CONTACT US</h2>
+
+            <div class="max-w-6xl mx-auto bg-sre-black p-6 md:p-12 rounded-xl shadow-2xl border-t-8 border-sre-orange">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+
+                    <div class="p-4 border-b md:border-r border-gray-700">
+                        <h3 class="text-xl font-bold text-sre-orange">Address</h3>
+                        <p class="text-lg leading-relaxed">
                             7/2, DVP Industrial Estate, Athipalayam Road, Chinnavedampatti, Ganapathy, Coimbatore - 641006
                         </p>
                     </div>
 
-                    <div class="space-y-3 p-4 border-b md:border-b-0 md:border-r border-gray-700/50 flex flex-col items-center justify-center">
-                        <h3 class="text-xl font-bold uppercase text-sre-orange">Phone Numbers</h3>
-                        <div class="text-lg font-medium space-y-1">
-                            <p class="font-bold">Amit Bansal:</p>
-                            <a href="tel:9842214646" class="block text-sre-orange hover:text-sre-white transition duration-200 text-xl font-semibold">98422-14646</a>
-                            <p class="font-bold pt-2">Saurav Lohia:</p>
-                            <a href="tel:8489991937" class="block text-sre-orange hover:text-sre-white transition duration-200 text-xl font-semibold">84899-91937</a>
-                        </div>
+                    <div class="p-4 border-b md:border-r border-gray-700">
+                        <h3 class="text-xl font-bold text-sre-orange">Phone Numbers</h3>
+                        <p class="font-bold">Amit Bansal:</p>
+                        <a href="tel:9842214646" class="text-sre-orange text-xl font-semibold block">98422-14646</a>
+                        <p class="font-bold pt-2">Saurav Lohia:</p>
+                        <a href="tel:8489991937" class="text-sre-orange text-xl font-semibold block">84899-91937</a>
                     </div>
 
-                    <div class="space-y-3 p-4 flex flex-col items-center justify-center">
-                        <h3 class="text-xl font-bold uppercase text-sre-orange">Email</h3>
-                        <div class="text-lg font-medium space-y-1">
-                            <a href="mailto:amit@srirani.com" class="block text-sre-white hover:text-sre-orange transition duration-200 text-xl font-semibold">
-                                amit@srirani.com
-                            </a>
-                        </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold text-sre-orange">Email</h3>
+                        <a href="mailto:amit@srirani.com" class="text-xl font-semibold">amit@srirani.com</a>
                     </div>
 
                 </div>
-                
             </div>
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="bg-sre-black text-white py-10 text-center">
         <p>&copy; <span id="current-year"></span> SRI RANISATI ENTERPRISES. All rights reserved.</p>
     </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('current-year').textContent = new Date().getFullYear();
             const menuButton = document.getElementById('menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
-            const mobileLinks = document.querySelectorAll('.mobile-link');
-            
-            menuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-            
-            mobileLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                });
-            });
-            document.getElementById('current-year').textContent = new Date().getFullYear();
+            const links = document.querySelectorAll('.mobile-link');
+
+            menuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+            links.forEach(link => link.addEventListener('click', () => mobileMenu.classList.add('hidden')));
         });
     </script>
+
 </body>
 </html>

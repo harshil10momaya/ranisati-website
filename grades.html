@@ -58,14 +58,13 @@
                 transform: translateX(-50%);
             }
         }
-        /* FINAL FIX: Logo in Circle Styling for perfect fit */
         .logo-circle-wrapper {
             background-color: white;
             border-radius: 50%;
             padding: 4px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-            width: 40px; 
-            height: 40px;
+            width: 44px; 
+            height: 44px;
             overflow: hidden; 
             display: flex;
             align-items: center;
@@ -74,11 +73,10 @@
         .logo-circle-wrapper img {
             width: 100%;
             height: 100%;
-            object-fit: cover; 
+            object-fit: contain; 
             object-position: center;
         }
 
-        /* FINAL FIX: Remove pointer events (linking/clicking) for EN19 and 20MNCR5 on mobile view */
         @media (max-width: 767px) {
             .grade-en19, .grade-20mncr5 {
                 pointer-events: none;

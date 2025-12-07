@@ -58,14 +58,13 @@
                 transform: translateX(-50%);
             }
         }
-        /* FINAL FIX: Logo in Circle Styling for perfect fit */
         .logo-circle-wrapper {
             background-color: white;
             border-radius: 50%;
             padding: 4px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-            width: 40px; 
-            height: 40px;
+            width: 44px; 
+            height: 44px;
             overflow: hidden; 
             display: flex;
             align-items: center;
@@ -74,15 +73,14 @@
         .logo-circle-wrapper img {
             width: 100%;
             height: 100%;
-            object-fit: cover; 
+            object-fit: contain; 
             object-position: center;
         }
-        /* Image Card Fix: Ensures full product image is visible */
         .card-image-wrapper {
             width: 100%;
-            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            padding-top: 56.25%; 
             position: relative;
-            background-color: #333; /* Dark background behind image */
+            background-color: #333; 
         }
         .card-image-wrapper img {
             position: absolute;
@@ -90,7 +88,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: contain; /* Ensures entire image is visible without cropping */
+            object-fit: contain; 
         }
     </style>
 </head>

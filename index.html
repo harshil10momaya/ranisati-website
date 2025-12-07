@@ -55,18 +55,29 @@
         ::-webkit-scrollbar-track {
             background: #1a1a1a;
         }
-        /* Logo visibility fix (Removed sre-logo-bg as the PNG already has white background) */
-        .bg-cover-center {
-            background-size: cover;
-            background-position: center;
+        /* Logo visibility fix */
+        .sre-logo-bg {
+            background-color: white;
+            border-radius: 50%;
+            padding: 4px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
         }
-        /* FIX: Hero Image Context and Zoom */
+        
+        /* FIX: Hero Image Context and Zoom (Final Attempt) */
         #home {
             background-image: url('https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765432/IMG_8563_kj9z9i.webp'); 
             background-color: #1a1a1a;
-            background-size: cover; /* Fill screen */
+            background-size: cover; /* Start by covering the screen */
             background-repeat: no-repeat;
-            background-position: center 40%; /* Adjust position to show more context (racks/inventory) */
+            background-position: center 40%; /* Shift focus up slightly */
+        }
+
+        /* Specific Mobile Zoom/Context Adjustment */
+        @media (max-width: 639px) {
+            #home {
+                background-size: 150%; /* Force image to be slightly smaller than cover to show more context */
+                background-position: center top; /* Center horizontally, push to top to reveal bottom content */
+            }
         }
         
         /* FIX: Ensure images fit entirely without cropping (Capabilities/Products) */

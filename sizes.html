@@ -58,7 +58,6 @@
                 transform: translateX(-50%);
             }
         }
-        /* FINAL FIX: Logo in Circle Styling for perfect fit */
         .logo-circle-wrapper {
             background-color: white;
             border-radius: 50%;
@@ -74,7 +73,7 @@
         .logo-circle-wrapper img {
             width: 100%;
             height: 100%;
-            object-fit: cover; 
+            object-fit: contain;
             object-position: center;
         }
     </style>
@@ -85,7 +84,7 @@
             <div class="flex items-center justify-between h-16">
                 <a href="index.html" class="flex items-center flex-shrink-0">
                     <div class="logo-circle-wrapper">
-                        <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1764085580/favicon_pcokoh.png" alt="SRI RANISATI Logo">
+                        <img src="images/SRE_logo.svg" alt="SRI RANISATI Logo">
                     </div>
                 </a>
                 <div class="hidden md:block">

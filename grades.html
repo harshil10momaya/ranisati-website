@@ -29,6 +29,7 @@
             }
         }
     </script>
+
     <style>
         section {
             padding-top: 5rem;
@@ -58,14 +59,16 @@
                 transform: translateX(-50%);
             }
         }
+
+        /* exact logo wrapper used on index.html */
         .logo-circle-wrapper {
             background-color: white;
             border-radius: 50%;
             padding: 4px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-            width: 44px; /* Increased size for clarity */
+            width: 44px;
             height: 44px;
-            overflow: hidden; 
+            overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -89,12 +92,14 @@
 </head>
 <body class="bg-sre-bg-dark text-sre-white">
 
+    <!-- NAV (exact same structure as index.html) -->
     <nav class="fixed top-0 left-0 right-0 z-50 bg-sre-black text-white shadow-lg">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <a href="index.html" class="flex items-center flex-shrink-0">
                     <div class="logo-circle-wrapper">
-                        <img src="images/SRE_logo.svg" alt="SRI RANISATI Logo">
+                        <!-- **USE THE SAME IMAGE AS INDEX** -->
+                        <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1764085580/favicon_pcokoh.png" alt="SRI RANISATI Logo">
                     </div>
                 </a>
                 <div class="hidden md:block">
@@ -123,7 +128,8 @@
             </div>
         </div>
     </nav>
-    
+    <!-- end nav -->
+
     <section id="grades" class="py-20 bg-sre-bg-dark text-sre-white pt-24">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center mb-10 text-sre-white">OUR STANDARD GRADES</h2>
@@ -163,18 +169,14 @@
     <section id="contact" class="py-20 bg-sre-bg-dark">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center mb-10 text-sre-white">CONTACT US</h2>
-            
             <div class="max-w-6xl mx-auto bg-sre-black text-sre-white p-6 md:p-12 rounded-xl shadow-2xl border-t-8 border-sre-orange">
-                
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 text-center">
-                    
                     <div class="space-y-3 p-4 border-b md:border-b-0 md:border-r border-gray-700/50 flex flex-col items-center justify-center">
                         <h3 class="text-xl font-bold uppercase text-sre-orange">Address</h3>
                         <p class="text-lg font-medium leading-relaxed">
                             7/2, DVP Industrial Estate, Athipalayam Road, Chinnavedampatti, Ganapathy, Coimbatore - 641006
                         </p>
                     </div>
-
                     <div class="space-y-3 p-4 border-b md:border-b-0 md:border-r border-gray-700/50 flex flex-col items-center justify-center">
                         <h3 class="text-xl font-bold uppercase text-sre-orange">Phone Numbers</h3>
                         <div class="text-lg font-medium space-y-1">
@@ -184,7 +186,6 @@
                             <a href="tel:8489991937" class="block text-sre-orange hover:text-sre-white transition duration-200 text-xl font-semibold">84899-91937</a>
                         </div>
                     </div>
-
                     <div class="space-y-3 p-4 flex flex-col items-center justify-center">
                         <h3 class="text-xl font-bold uppercase text-sre-orange">Email</h3>
                         <div class="text-lg font-medium space-y-1">
@@ -193,9 +194,7 @@
                             </a>
                         </div>
                     </div>
-
                 </div>
-                
             </div>
         </div>
     </section>

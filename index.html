@@ -55,24 +55,21 @@
         ::-webkit-scrollbar-track {
             background: #1a1a1a;
         }
-        /* Logo visibility fix */
-        .sre-logo-bg {
-            background-color: white;
-            border-radius: 50%;
-            padding: 4px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        /* Logo visibility fix (Removed sre-logo-bg as the PNG already has white background) */
+        .bg-cover-center {
+            background-size: cover;
+            background-position: center;
         }
-        
         /* FIX: Hero Image Context and Zoom */
         #home {
             background-image: url('https://res.cloudinary.com/dwy8dmnyp/image/upload/v1762765432/IMG_8563_kj9z9i.webp'); 
             background-color: #1a1a1a;
             background-size: cover; /* Fill screen */
             background-repeat: no-repeat;
-            /* Adjust position to show more context (racks/inventory) */
-            background-position: center 40%; 
+            background-position: center 40%; /* Adjust position to show more context (racks/inventory) */
         }
-        /* FIX: Ensure images fit entirely without cropping (The Absolute Final Fix) */
+        
+        /* FIX: Ensure images fit entirely without cropping (Capabilities/Products) */
         .card-image-wrapper {
             width: 100%;
             padding-top: 56.25%; /* 16:9 Aspect Ratio */
@@ -126,8 +123,8 @@
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <a href="index.html" class="flex items-center flex-shrink-0">
-                    <div class="sre-logo-bg p-1 shadow-md">
-                        <img src="images/SRE_logo.svg" alt="SRI RANISATI Logo" class="h-10 w-auto">
+                    <div class="rounded-full bg-sre-white p-1 shadow-md">
+                        <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1764085580/favicon_pcokoh.png" alt="SRI RANISATI Logo" class="h-10 w-auto">
                     </div>
                 </a>
                 <div class="hidden md:block">

@@ -58,6 +58,16 @@
                 transform: translateX(-50%);
             }
         }
+        /* FINAL FIX: Remove pointer events (linking/clicking) for EN19 and 20MNCR5 on mobile view */
+        @media (max-width: 767px) {
+            .grade-en19, .grade-20mncr5 {
+                pointer-events: none;
+                cursor: default;
+                /* Optionally remove hover effects if they exist */
+                transition: none !important;
+                transform: none !important;
+            }
+        }
     </style>
 </head>
 <body class="bg-sre-bg-dark text-sre-white">
@@ -67,7 +77,7 @@
             <div class="flex items-center justify-between h-16">
                 <a href="index.html" class="flex items-center flex-shrink-0">
                     <div class="rounded-full bg-sre-white p-1 shadow-md">
-                        <img src="images/SRE_logo.svg" alt="SRI RANISATI Logo" class="h-10 w-auto">
+                        <img src="https://res.cloudinary.com/dwy8dmnyp/image/upload/v1764085580/favicon_pcokoh.png" alt="SRI RANISATI Logo" class="h-10 w-auto">
                     </div>
                 </a>
                 <div class="hidden md:block">
@@ -107,8 +117,8 @@
                 <div class="p-4 bg-sre-card-dark text-sre-white rounded-lg shadow-md text-center font-semibold border-b-4 border-sre-orange flex items-center justify-center min-h-[6rem]">MS ROUND (IS2062)</div>
                 <div class="p-4 bg-sre-card-dark text-sre-white rounded-lg shadow-md text-center font-semibold border-b-4 border-sre-orange flex items-center justify-center min-h-[6rem]">EN8</div>
                 <div class="p-4 bg-sre-card-dark text-sre-white rounded-lg shadow-md text-center font-semibold border-b-4 border-sre-orange flex items-center justify-center min-h-[6rem]">EN9</div>
-                <div class="p-4 bg-sre-card-dark text-sre-white rounded-lg shadow-md text-center font-semibold border-b-4 border-sre-orange flex items-center justify-center min-h-[6rem]">EN19</div>
-                <div class="p-4 bg-sre-card-dark text-sre-white rounded-lg shadow-md text-center font-semibold border-b-4 border-sre-orange flex items-center justify-center min-h-[6rem]">20MNCR5</div>
+                <div class="p-4 bg-sre-card-dark text-sre-white rounded-lg shadow-md text-center font-semibold border-b-4 border-sre-orange flex items-center justify-center min-h-[6rem] grade-en19">EN19</div>
+                <div class="p-4 bg-sre-card-dark text-sre-white rounded-lg shadow-md text-center font-semibold border-b-4 border-sre-orange flex items-center justify-center min-h-[6rem] grade-20mncr5">20MNCR5</div>
                 <div class="p-4 bg-sre-card-dark text-sre-white rounded-lg shadow-md text-center font-semibold border-b-4 border-sre-orange flex items-center justify-center min-h-[6rem]">EN24</div>
                 <div class="p-4 bg-sre-card-dark text-sre-white rounded-lg shadow-md text-center font-semibold border-b-4 border-sre-orange flex items-center justify-center min-h-[6rem]">EN353</div>
             </div>
